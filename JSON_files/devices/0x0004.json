@@ -1,0 +1,68 @@
+{
+  "0x0004": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "救急用センサ",
+      "en": "First-aid sensor"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検知閾値レベル設定",
+          "en": "Detection threshold level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "救急発生状態",
+          "en": "First-aid occurrence status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "救急発生状態リセット設定",
+          "en": "First-aid occurrence status resetting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      }
+    }
+  }
+}

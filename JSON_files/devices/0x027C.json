@@ -1,0 +1,912 @@
+{
+  "0x027C": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "燃料電池",
+      "en": "Fuel cell"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "沸き上げ湯温自動設定",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "沸き上げ中状態",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "沸き上げ湯温設定値",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温水器湯温計測値",
+          "en": "Measured temperature of water in water heater"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100Celsius"
+        }
+      },
+      "0xC2": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "I"
+            },
+            "propertyName": {
+              "ja": "定格発電量",
+              "en": "Rated power generation output"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-65533",
+              "unit": "W"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "定格発電出力",
+              "en": "Rated power generation output"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-65533",
+              "unit": "W"
+            }
+          }
+        ]
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "貯湯槽熱量",
+          "en": "Heating value of hot water storage tank"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "MJ"
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "瞬時発電電力計測値",
+          "en": "Measured instantaneous power generation output"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算発電電力量計測値",
+          "en": "Measured cumulative power generation output"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        },
+        "note": {
+          "ja": "オーバーフロー時は0にリセット",
+          "en": "The value is reset to 0 after overflow"
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算発電電力量リセット設定",
+          "en": "Cumulative power generation output reset setting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "瞬時ガス消費量計測値",
+          "en": "Measured instantaneous gas consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "m3/h",
+          "multipleOf": 0.001
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量計測値",
+          "en": "Measured cumulative gas consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "m3",
+          "multipleOf": 0.001
+        }
+      },
+      "0xC9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量リセット設定",
+          "en": "Cumulative gas consumption reset setting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xCA": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "B"
+            },
+            "propertyName": {
+              "ja": "発電動作設定",
+              "en": "Power generation setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "C",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "発電動作設定",
+              "en": "Power generation setting"
+            },
+            "accessRule": {
+              "get": "notApplicable",
+              "set": "optional",
+              "inf": "notApplicable"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "発電動作設定",
+              "en": "Power generation setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          }
+        ]
+      },
+      "0xCB": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "C",
+              "to": "I"
+            },
+            "propertyName": {
+              "ja": "発電動作状態",
+              "en": "Power generation status"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "発電中",
+                    "en": "Generating"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "停止中",
+                    "en": "Stopped"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "起動中",
+                    "en": "Starting"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "停止動作中",
+                    "en": "Stopping"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "アイドル中",
+                    "en": "idling"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "発電動作状態",
+              "en": "Power generation status"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "required"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "発電中",
+                    "en": "Generating"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "停止中",
+                    "en": "Stopped"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "起動中",
+                    "en": "Starting"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "停止動作中",
+                    "en": "Stopping"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "アイドル中",
+                    "en": "idling"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xCC": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "宅内瞬時消費電力計測値",
+          "en": "Measured in-house instantaneous power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xCD": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "宅内積算消費電力量計測値",
+          "en": "Measured in-house cumulative power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        }
+      },
+      "0xCE": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "宅内積算消費電力量リセット設定",
+          "en": "In-house cumulative power consumption reset"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xD0": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "B",
+              "to": "I"
+            },
+            "propertyName": {
+              "ja": "系統連系状態",
+              "en": "System interconnected type"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "系統連系（逆潮流可）",
+                    "en": "System-interconnected type(reverse power flow acceptable)"
+                  }
+                },
+                {
+                  "edt": "0x01",
+                  "state": {
+                    "ja": "独立",
+                    "en": "Independent type"
+                  }
+                },
+                {
+                  "edt": "0x02",
+                  "state": {
+                    "ja": "系統連系（逆潮流不可）",
+                    "en": "System-interconnected type(reverse power flow not acceptable)"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "系統連系状態",
+              "en": "System interconnected type"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "系統連系（逆潮流可）",
+                    "en": "System-interconnected type(reverse power flow acceptable)"
+                  }
+                },
+                {
+                  "edt": "0x01",
+                  "state": {
+                    "ja": "独立",
+                    "en": "Independent type"
+                  }
+                },
+                {
+                  "edt": "0x02",
+                  "state": {
+                    "ja": "系統連系（逆潮流不可）",
+                    "en": "System-interconnected type(reverse power flow not acceptable)"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xD1": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "B"
+            },
+            "propertyName": {
+              "ja": "給湯温度設定値",
+              "en": "Temperature of supplied water setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "発電要請時刻設定",
+              "en": "Power generation request time setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": [
+                    {
+                      "name": "start",
+                      "element": {
+                        "type": "time",
+                        "size": 2
+                      }
+                    },
+                    {
+                      "name": "end",
+                      "element": {
+                        "type": "time",
+                        "size": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "state",
+                  "size": 4,
+                  "enum": [
+                    {
+                      "edt": "0xFFFFFFFF",
+                      "state": {
+                        "ja": "未設定",
+                        "en": "undefined"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "指定発電状態",
+          "en": "Designated power generation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "定格最大での発電",
+                "en": "Power generation at the maximum rating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "負荷追従での発電",
+                "en": "Load following power generation"
+              }
+            }
+          ]
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "風呂温度設定値",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "沸き上げ湯量設定値",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xE1": {
+        "propertyName": {
+          "ja": "残湯量計測値",
+          "en": "Measured remaining hot water amount"
+        },
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "タンク容量値",
+          "en": "Tank capacity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "風呂自動モード設定",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "追い焚き",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "風呂足し湯動作設定",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "風呂ぬるめ動作設定",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定２",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "A",
+          "to": "B"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定３",
+          "en": ""
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      }
+    }
+  }
+}

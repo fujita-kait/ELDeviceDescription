@@ -1,0 +1,54 @@
+{
+  "0x0401": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "体重計",
+      "en": "Weighing machine"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "体重計測値",
+          "en": "Measured value of body weight"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kg",
+          "multipleOf": 0.1
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "体脂肪計測値",
+          "en": "Measured value of body fat"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-1000",
+          "unit": "%",
+          "multipleOf": 0.1
+        }
+      }
+    }
+  }
+}

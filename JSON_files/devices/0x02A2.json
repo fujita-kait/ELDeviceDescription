@@ -1,0 +1,339 @@
+{
+  "0x02A2": {
+    "validRelease": {
+      "from": "H",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "Household small wind turbine power generation",
+      "en": "Household small wind turbine power generation"
+    },
+    "elProperties": {
+      "0xD0": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "System interconnection status",
+          "en": "System interconnection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "state": {
+                "ja": "System-linked type",
+                "en": "System-linked type"
+              }
+            },
+            {
+              "edt": "0x01",
+              "state": {
+                "ja": "Independent type",
+                "en": "Independent type"
+              }
+            },
+            {
+              "edt": "0x02",
+              "state": {
+                "ja": "Hybrid type",
+                "en": "Hybrid type"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Measured instantaneous amount of electricity Generated",
+          "en": "Measured instantaneous amount of electricity Generated"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Measured cumulative amount of electricity generated",
+          "en": "Measured cumulative amount of electricity generated"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Resetting cumulative amount of electricity generated",
+          "en": "Resetting cumulative amount of electricity generated"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Measured cumulative amount of electricity sold",
+          "en": "Measured cumulative amount of electricity sold"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Resetting cumulative amount of electricity sold",
+          "en": "Resetting cumulative amount of electricity sold"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Power generation output limit setting 1",
+          "en": "Power generation output limit setting 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Power generation output limit setting 2",
+          "en": "Power generation output limit setting 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Limit setting for the amount of electricity sold",
+          "en": "Limit setting for the amount of electricity sold"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Rated power",
+          "en": "Rated power"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Measured wind speed",
+          "en": "Measured wind speed"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "m/s"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Rated wind speed",
+          "en": "Rated wind speed"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "m/s"
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Cut-in wind speed",
+          "en": "Cut-in wind speed"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "m/s"
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Cut-out wind speed",
+          "en": "Cut-out wind speed"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "m/s"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Extreme wind speed",
+          "en": "Extreme wind speed"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "m/s"
+        }
+      },
+      "0xEF": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Braking status",
+          "en": "Braking status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      }
+    }
+  }
+}

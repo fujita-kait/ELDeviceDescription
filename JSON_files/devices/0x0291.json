@@ -1,0 +1,32 @@
+{
+  "0x0291": {
+    "validRelease": {
+      "from": "F",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "単機能照明",
+      "en": "Mono functional lighting"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "照度レベル設定",
+          "en": "Illuminance Level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      }
+    }
+  }
+}

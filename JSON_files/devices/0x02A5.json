@@ -1,0 +1,189 @@
+{
+  "0x02A5": {
+    "validRelease": {
+      "from": "K",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "マルチ入力PCS",
+      "en": "Multiple input PCS"
+    },
+    "elProperties": {
+      "0x83": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "識別番号",
+          "en": "Identification number"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_17"
+        }
+      },
+      "0x97": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "現在時刻設定",
+          "en": "Current time setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x98": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "現在年月日設定",
+          "en": "Current date setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "date-time",
+          "size": 4
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "系統連系状態",
+          "en": "System-interconnected type"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "state": {
+                "ja": "系統連系（逆潮流可）",
+                "en": "System-interconnected type(reverse power flow acceptable)"
+              }
+            },
+            {
+              "edt": "0x01",
+              "state": {
+                "ja": "独立",
+                "en": "Independent type"
+              }
+            },
+            {
+              "edt": "0x02",
+              "state": {
+                "ja": "系統連系（逆潮流不可）",
+                "en": "System-interconnected type(reverse power flow not acceptable)"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算電力量計測値（正方向）",
+          "en": "Measured cumulative amount of electric energy(normal direction)"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算電力量計測値（逆方向）",
+          "en": "Measured cumulative amount of electric energy(reverse direction)"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "瞬時電力計測値",
+          "en": "Measured instantaneous electric energy"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-2147483647-2147483645",
+          "unit": "W"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "接続機器リスト",
+          "en": "List of connected devices"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-31"
+        }
+      }
+    }
+  }
+}

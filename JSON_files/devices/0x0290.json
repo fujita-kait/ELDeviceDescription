@@ -1,0 +1,594 @@
+{
+  "0x0290": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "一般照明",
+      "en": "General lighting"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x94": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ予約設定",
+          "en": "OFF timer reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x95": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ時刻設定値",
+          "en": "OFF timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "照度レベル設定",
+          "en": "Illuminance Level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xB1": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "B"
+            },
+            "propertyName": {
+              "ja": "光色設定",
+              "en": "Light color setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_LightColor-41-44"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "C",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "光色設定",
+              "en": "Light color setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_LightColor-40-44FD"
+            }
+          }
+        ]
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "照度レベル段数設定",
+          "en": "Brightness level step setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "光色レベル段数設定",
+          "en": "Light color step setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "設定可能レベル最大値",
+          "en": "Maximum specifiable values"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "brightness",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_1-255"
+                  },
+                  {
+                    "type": "state",
+                    "size": 1,
+                    "enum": [
+                      {
+                        "edt": "0x00",
+                        "state": {
+                          "ja": "機能を搭載していない場合",
+                          "en": "When the function is not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "color",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_1-255"
+                  },
+                  {
+                    "type": "state",
+                    "size": 1,
+                    "enum": [
+                      {
+                        "edt": "0x00",
+                        "state": {
+                          "ja": "機能を搭載していない場合",
+                          "en": "When the function is not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xB5": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "常夜灯設定可能レベル最大値",
+          "en": "Maximum value of settable level for night lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "brightness",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_1-255"
+                  },
+                  {
+                    "type": "state",
+                    "size": 1,
+                    "enum": [
+                      {
+                        "edt": "0x00",
+                        "state": {
+                          "ja": "機能を搭載していない場合",
+                          "en": "When the function is not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "color",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_1-255"
+                  },
+                  {
+                    "type": "state",
+                    "size": 1,
+                    "enum": [
+                      {
+                        "edt": "0x00",
+                        "state": {
+                          "ja": "機能を搭載していない場合",
+                          "en": "When the function is not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xB6": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "点灯モード設定",
+          "en": "Lighting mode setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動",
+                "en": "Automatic"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "通常灯",
+                "en": "Normal Lighting"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "常夜灯",
+                "en": "Night Lighting"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "カラー灯",
+                "en": "Color Lighting"
+              }
+            }
+          ]
+        }
+      },
+      "0xB7": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通常灯モード時照度レベル設定",
+          "en": "Brightness level setting for main lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xB8": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通常灯モード時照度レベル段数設定",
+          "en": "Brightness level step setting for main lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xB9": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "常夜灯モード時照度レベル設定",
+          "en": "Brightness level setting for night lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xBA": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "常夜灯モード時照度レベル段数設定",
+          "en": "Brightness level step setting for night lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xBB": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通常灯モード時光色設定",
+          "en": "Light color setting for main lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LightColor-40-44"
+        }
+      },
+      "0xBC": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通常灯モード時光色レベル段数設定",
+          "en": "Light color level step setting for main lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xBD": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "常夜灯モード時光色設定",
+          "en": "Light color setting for night lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LightColor-40-44"
+        }
+      },
+      "0xBE": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "常夜灯モード時光色レベル段数設定",
+          "en": "Light color level step setting for night lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動モード時点灯モード状態",
+          "en": "Lighting mode status in Auto mode"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "通常灯",
+                "en": "Normal Lighting"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "常夜灯",
+                "en": "Night Lighting"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "消灯",
+                "en": "Color Lighting"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "カラー灯",
+                "en": "Color Lighting"
+              }
+            }
+          ]
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "カラー灯モード時RGB 設定",
+          "en": "RGB setting for color lighting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "red",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "green",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "blue",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

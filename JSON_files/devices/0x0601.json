@@ -1,0 +1,162 @@
+{
+  "0x0601": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ディスプレイ",
+      "en": "Display"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "表示制御設定",
+          "en": "Display control setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "表示",
+                "en": "Displaying enabled"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "非表示",
+                "en": "Displaying disabled"
+              }
+            }
+          ]
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "文字列設定受付可能状態",
+          "en": "Character string setting acceptance status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "Ready",
+                "en": "Ready"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "Busy",
+                "en": "Busy"
+              }
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "表示可能文字コード",
+          "en": "Supported character codes"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "伝達文字列設定",
+          "en": "Character string to present to the user"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-247"
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "受付け伝達文字列長",
+          "en": "Length of character string accepted"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "length",
+              "element": {
+                "$ref": "#/definitions/number_0-244"
+              }
+            },
+            {
+              "name": "reserved",
+              "element": {
+                "type": "state",
+                "size": 1,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "state": {
+                      "ja": "reserved",
+                      "en": "reserved"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

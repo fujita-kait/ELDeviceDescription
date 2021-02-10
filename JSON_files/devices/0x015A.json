@@ -1,0 +1,471 @@
+{
+  "0x015A": {
+    "validRelease": {
+      "from": "M",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "レンジフード",
+      "en": "Range hood"
+    },
+    "elProperties": {
+      "0xA0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気風量設定",
+          "en": "Ventilation air flow rate setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "レンジフード自動設定",
+          "en": "Range hood automatic setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内温度計測値",
+          "en": "Measured value of indoor temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-2732-32766",
+          "unit": "Celsius",
+          "multipleOf": 0.1
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室外温度計測値",
+          "en": "Measured value of outdoor temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-2732-32766",
+          "unit": "Celsius",
+          "multipleOf": 0.1
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "給気温度計測値",
+          "en": "Measured value of charging air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-2732-32766",
+          "unit": "Celsius",
+          "multipleOf": 0.1
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "調理温度計測値",
+          "en": "Measured value of cooking temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-2732-32766",
+          "unit": "Celsius",
+          "multipleOf": 0.1
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内相対湿度計測値",
+          "en": "Measured value of indoor relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室外相対湿度計測値",
+          "en": "Measured value of outdoor relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "人体検知閾値レベル設定",
+          "en": "Human detection threshold level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "人体検知状態",
+          "en": "Human detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "CO2 濃度計測値",
+          "en": "Measured value of CO2 concentration"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "ppm"
+        }
+      },
+      "0xC9": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ガス検知閾値レベル状態",
+          "en": "Gas detection threshold level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ガス検知状態",
+          "en": "Gas detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xCB": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "エラー検知モード",
+          "en": "Error detection mode"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "モーターエラー状態",
+                "en": "Motor Error"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "整流板検知状態",
+                "en": "Current Plate Detection"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "正常状態",
+                "en": "Normal"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "照明動作設定",
+          "en": "Lighting operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "点灯",
+                "en": "Lighting"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "消灯",
+                "en": "Lights-out"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "点滅",
+                "en": "Flicker "
+              }
+            }
+          ]
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "光源色設定",
+          "en": "Light source color setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LightColor-40-44FD"
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "輝度レベル設定",
+          "en": "Brightness level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "点灯モード設定",
+          "en": "Lighting mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動",
+                "en": "Automatic"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "通常灯",
+                "en": "Normal Lighting"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "カラー灯",
+                "en": "Color Lighting"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "カラー灯モード時RGB 設定",
+          "en": "When in colored lighting mode RGB setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "red",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "green",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "blue",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

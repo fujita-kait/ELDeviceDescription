@@ -1,0 +1,357 @@
+{
+  "0x05FF": {
+    "validRelease": {
+      "from": "G",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "コントローラ",
+      "en": "Controller"
+    },
+    "elProperties": {
+      "0xC0": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "コントローラID",
+          "en": "Controller ID"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-40"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理台数",
+          "en": "Number of devices controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "インデックス",
+          "en": "Index"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "機器ID",
+          "en": "Device ID"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-40"
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "機種",
+          "en": "Device type"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "名称",
+          "en": "Name"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "raw",
+          "minSize": 1,
+          "maxSize": 64
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "接続状態",
+          "en": "Connection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "接続中",
+                "en": "Connected"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "離脱中",
+                "en": "Disconnected"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "未登録",
+                "en": "Not registered"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "削除",
+                "en": "Deleted"
+              }
+            }
+          ]
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器事業者コード",
+          "en": "Business code of the device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器商品コード",
+          "en": "Product code of the device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-12"
+        }
+      },
+      "0xC9": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器製造年月日",
+          "en": "Manufacture date of the device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "date-time",
+          "size": 4
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器登録情報更新年月日",
+          "en": "Registerd information renewal date of the device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "date-time",
+          "size": 4
+        }
+      },
+      "0xCB": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器登録情報更新バージョン情報",
+          "en": "Registerd information renewal version information of the device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533"
+        }
+      },
+      "0xCC": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器設置場所",
+          "en": "Place to install device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xCD": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器異常発生状態",
+          "en": "Fault status of device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xCE": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器Setプロパティマップ",
+          "en": "Set property map for device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-17"
+        }
+      },
+      "0xCF": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "管理対象機器Getプロパティマップ",
+          "en": "Get property map for device to be controlled"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-17"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "設置住所",
+          "en": "Address of installation location"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "raw",
+          "minSize": 1,
+          "maxSize": 255
+        }
+      }
+    }
+  }
+}

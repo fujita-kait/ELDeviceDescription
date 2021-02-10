@@ -1,0 +1,70 @@
+{
+  "0x0014": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "水位センサ",
+      "en": "Water level sensor"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水位超過検知閾値設定",
+          "en": "Water level over detection threshold level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "cm"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水位超過検知状態",
+          "en": "Water level over detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水位計測値",
+          "en": "Measured value of Water level"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "cm"
+        }
+      }
+    }
+  }
+}

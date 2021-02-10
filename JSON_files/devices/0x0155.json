@@ -1,0 +1,500 @@
+{
+  "0x0155": {
+    "validRelease": {
+      "from": "E",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電気蓄熱暖房器",
+      "en": "Electric storage heater"
+    },
+    "elProperties": {
+      "0xA0": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風量設定",
+          "en": "Air flow rate setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "OFF",
+                "en": "OFF"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "弱",
+                "en": "Low"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "強",
+                "en": "High"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動",
+                "en": "Auto"
+              }
+            }
+          ]
+        }
+      },
+      "0xA1": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファン動作状態",
+          "en": "Fan operation status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "OFF",
+                "en": "OFF"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "弱",
+                "en": "Low"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "強",
+                "en": "High"
+              }
+            }
+          ]
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定値",
+          "en": "Temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-50Celsius"
+        }
+      },
+      "0xB8": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定格消費電力値",
+          "en": "Rated power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "heatStorage",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "W"
+              }
+            },
+            {
+              "name": "control",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "W"
+              }
+            },
+            {
+              "name": "weakAirFlowing",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "W"
+              }
+            },
+            {
+              "name": "strongAirFlowing",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "W"
+              }
+            }
+          ]
+        }
+      },
+      "0xBB": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内温度計測値",
+          "en": "Measured indoor temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xBE": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "外気温度計測値",
+          "en": "Measured outdoor temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "蓄熱動作状態",
+          "en": "Heat storage operation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "蓄熱温度設定値",
+          "en": "Heat storage temperature setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-1000",
+          "unit": "Celsius"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "蓄熱温度計測値",
+          "en": "Measured stored heat temperature"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-200-1000",
+          "unit": "Celsius"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "昼間蓄熱設定",
+          "en": "Daytime heat storage setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "昼間蓄熱可否状態",
+          "en": "Daytime heat storage ability"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-3031"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "深夜電力通電時間設定値",
+          "en": "Midnight power duration setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-23"
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "深夜電力開始時刻設定値",
+          "en": "Midnight power start time setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-23"
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "放熱方法",
+          "en": "Radiation method"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "ファン有",
+                "en": "YES"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "ファン無",
+                "en": "NO"
+              }
+            }
+          ]
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "チャイルドロック設定",
+          "en": "Child lock setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-3031"
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンタイマ1 予約設定",
+          "en": "Fan timer 1 setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンタイマ1 開始時刻設定値",
+          "en": "Fan timer 1 ON time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンタイマ1 終了時刻設定値",
+          "en": "Fan timer 1 OFF time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンタイマ2 予約設定",
+          "en": "Fan timer 2 setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンタイマ2 開始時刻設定値",
+          "en": "Fan timer 2 ON time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンタイマ2 終了時刻設定値",
+          "en": "Fan timer 2 OFF time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      }
+    }
+  }
+}

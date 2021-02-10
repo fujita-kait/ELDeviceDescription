@@ -1,0 +1,503 @@
+{
+  "0x0283": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "LPガスメータ",
+      "en": "LP gas meter"
+    },
+    "elProperties": {
+      "0xD0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "供給圧力データ最大値",
+          "en": "Maximum value of supply pressure data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kPa",
+          "multipleOf": 0.01
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "供給圧力データ最小値",
+          "en": "Minimum value of supply pressure data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kPa",
+          "multipleOf": 0.01
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "供給圧力データ現在値",
+          "en": "Current value of supply pressure data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kPa",
+          "multipleOf": 0.01
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "閉塞圧力データ最大値",
+          "en": "Maximum value of block pressure data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kPa",
+          "multipleOf": 0.01
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "閉塞圧力データ最小値",
+          "en": "Minimum value of block pressure data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kPa",
+          "multipleOf": 0.01
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "閉塞圧力データ現在値",
+          "en": "Current value of block pressure data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "kPa",
+          "multipleOf": 0.01
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "閉塞圧力・供給圧力異常日回数情報",
+          "en": "Number of block pressure/supply pressure error days:times"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_4"
+        }
+      },
+      "0xD7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "テスト発呼設定",
+          "en": "Test call setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検針データ積算ガス消費量計測値１",
+          "en": "Cumulative amount of gas consumption of metering data 1"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99999999",
+          "unit": "m3",
+          "multipleOf": 0.0001
+        },
+        "note": {
+          "ja": "0xE0または0xE1のいずれかを必須",
+          "en": "Either 0xE0 or 0xE1 is required."
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検針データ積算ガス消費量計測値２",
+          "en": "Cumulative amount of gas consumption of metering data 2"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99999999",
+          "unit": "m3",
+          "multipleOf": 0.001
+        },
+        "note": {
+          "ja": "0xE0または0xE1のいずれかを必須",
+          "en": "Either 0xE0 or 0xE1 is required."
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検針データ異常検知状態",
+          "en": "Error detection status of metering data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "セキュリティデータ情報１",
+          "en": "Security data 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_4"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "セキュリティデータ情報２",
+          "en": "Security data 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_4"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "センター弁遮断状態",
+          "en": "Center valve shut-off status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "センター弁遮断復帰許可状態",
+          "en": "Center valve shut-off recovery permission setting status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "緊急弁遮断状態",
+          "en": "Emergency valve shut-off status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "遮断弁開閉状態",
+          "en": "Shut-off valve open/close status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル",
+          "en": "Residual volume control warning"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "残量管理警告レベル１",
+                "en": "Residual volume control warning level 1"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "残量管理警告レベル２",
+                "en": "Residual volume control warning level 2"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "残量管理警告レベル３",
+                "en": "Residual volume control warning level 3"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "残量管理警告無し",
+                "en": "No residual volume control warning"
+              }
+            }
+          ]
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル設定値１",
+          "en": "Set value of residual volume control warning level 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル設定値２",
+          "en": "Set value of residual volume control warning level 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル設定値３",
+          "en": "Set value of residual volume control warning level 3"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "微少漏洩タイマ値（ガス流量継続）",
+          "en": "Slight leak timer value (gas flow rate continuation)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "day"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "微少漏洩タイマ値（圧力上昇無し）",
+          "en": "Slight leak timer value (without pressure increase)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "day"
+        }
+      },
+      "0xEF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "遮断理由履歴情報",
+          "en": "Shut-off reason log"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      }
+    }
+  }
+}

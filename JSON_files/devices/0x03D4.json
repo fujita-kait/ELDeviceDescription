@@ -1,0 +1,167 @@
+{
+  "0x03D4": {
+    "validRelease": {
+      "from": "F",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "業務用ショーケース向け室外機",
+      "en": "Commercial show case outdoor unit"
+    },
+    "elProperties": {
+      "0xAA": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "特殊状態",
+          "en": "Exceptional status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "通常",
+                "en": "Normal"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "除霜",
+                "en": "Defrosting"
+              }
+            }
+          ]
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転モード設定",
+          "en": "Operation mode setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "冷却",
+                "en": "Cooling"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "非冷",
+                "en": "Non-cooling"
+              }
+            }
+          ]
+        }
+      },
+      "0xBE": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "外気温度計測値",
+          "en": "Measured value of outdoor air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xCA": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "F",
+              "to": "H"
+            },
+            "propertyName": {
+              "ja": "グループ情報",
+              "en": "Group information"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "I",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "グループ情報",
+              "en": "Group information"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_1-253"
+                },
+                {
+                  "$ref": "#/definitions/state_NoSetting"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "コンプレッサ動作状態",
+          "en": "Group information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      }
+    }
+  }
+}

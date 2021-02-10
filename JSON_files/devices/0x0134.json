@@ -1,0 +1,515 @@
+{
+  "0x0134": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "空調換気扇",
+      "en": "Air conditioner ventilation fan"
+    },
+    "elProperties": {
+      "0x80": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "動作状態",
+          "en": "Operation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xA0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気風量設定",
+          "en": "Set value of ventilation air flow rate"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気モード自動設定",
+          "en": "Ventilation mode automatic mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_AUTO-NONAUTO-4142"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気方式設定",
+          "en": "Ventilation method setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "送風換気",
+                "en": "Blowing ventilation "
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "空調換気",
+                "en": "Air conditioning ventilation"
+              }
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気モード設定",
+          "en": "Ventilation mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "普通換気",
+                "en": "normal"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "熱交換換気",
+                "en": "heat-exchange"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "冷房換気",
+                "en": "cooling"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "暖房換気",
+                "en": "heating"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "除湿換気",
+                "en": "dehumidifying"
+              }
+            },
+            {
+              "edt": "0x46",
+              "state": {
+                "ja": "加湿換気",
+                "en": "humidifying"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他換気",
+                "en": "other"
+              }
+            }
+          ]
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷暖強弱設定",
+          "en": "Cooling / heating high-low setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内相対湿度設定値",
+          "en": "Set value of room relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xB9": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "消費電流計測値",
+          "en": "Measured value of electric current consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "A",
+          "multipleOf": 0.1
+        }
+      },
+      "0xBA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内相対湿度計測値",
+          "en": "Measured value of room relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xBE": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "外気温度計測値",
+          "en": "Measured value of outdoor air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気自動設定",
+          "en": "Ventilation auto setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_AUTO-NONAUTO-4142"
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "CO2濃度計測値",
+          "en": "Measured value of CO2 concentration"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "ppm"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "煙（タバコ）検知状態",
+          "en": "Smoke (cigarette) detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "汚れ検知状態",
+          "en": "Pollution detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "外気相対湿度計測値",
+          "en": "Measured value of outdoor relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "還気温度計測値",
+          "en": "Measured value of return air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 1,
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/number_-127-125Celsius"
+              },
+              {
+                "$ref": "#/definitions/state_Undefined-7E"
+              }
+            ]
+          }
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "還気相対湿度計測値",
+          "en": "Measured value of return relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 1,
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/number_0-100percent"
+              },
+              {
+                "$ref": "#/definitions/state_Undefined-FD"
+              }
+            ]
+          }
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "給気温度計測値",
+          "en": "Measured value of charging air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "給気相対湿度計測値",
+          "en": "Measured value of charging relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "排気温度計測値",
+          "en": "Measured value of discharging air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "排気相対湿度計測値",
+          "en": "Measured value of discharging air relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "熱交換器動作設定",
+          "en": "Heat exchanger operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      }
+    }
+  }
+}

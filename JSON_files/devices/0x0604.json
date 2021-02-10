@@ -1,0 +1,95 @@
+{
+  "0x0604": {
+    "validRelease": {
+      "from": "F",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ネットワークカメラ",
+      "en": "Network camera"
+    },
+    "elProperties": {
+      "0xC0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "静止画撮影設定受付可能状態",
+          "en": "Still image photography setting acceptance status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "Ready",
+                "en": "Ready"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "Busy",
+                "en": "Busy"
+              }
+            }
+          ]
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "静止画撮影設定",
+          "en": "Still image photography setting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "撮影",
+                "en": "Shoot"
+              }
+            }
+          ]
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "転送設定",
+          "en": "Transfer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      }
+    }
+  }
+}

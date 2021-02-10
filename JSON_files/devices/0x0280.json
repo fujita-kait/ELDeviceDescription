@@ -1,0 +1,97 @@
+{
+  "0x0280": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電力量メータ",
+      "en": "Watt-hour meter"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算電力量計測値",
+          "en": "Cumulative amounts of electric energy measurement value"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99999999",
+          "unit": "kWh",
+          "coefficient": [
+            "0xE2"
+          ]
+        },
+        "note": {
+          "ja": "0xE2の値を乗算する必要あり",
+          "en": "It is necessary to mutiply the value of 0xE2"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算電力量単位",
+          "en": "Cumulative amounts of electric energy unit"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算電力量計測値履歴１",
+          "en": "Cumulative amounts of electric energy measurement log 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 4,
+          "minItems": 48,
+          "maxItems": 48,
+          "items": {
+            "$ref": "#/definitions/number_0-99999999",
+            "unit": "kWh",
+            "coefficient": [
+              "0xE2"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

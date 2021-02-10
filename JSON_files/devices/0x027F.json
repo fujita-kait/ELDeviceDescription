@@ -1,0 +1,404 @@
+{
+  "0x027F": {
+    "validRelease": {
+      "from": "C",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "エンジンコージェネレーション",
+      "en": "Engine cogeneration"
+    },
+    "elProperties": {
+      "0xC1": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温水器湯温計測値",
+          "en": "Measured temperature of water in water heater"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100Celsius"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定格発電量",
+          "en": "Rated power generation output"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "貯湯槽熱量",
+          "en": "Heating value of hot water storage tank"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "MJ"
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "瞬時発電電力計測値",
+          "en": "Measured instantaneous power generation output"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算発電電力量計測値",
+          "en": "Measured cumulative power generation output"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "multipleOf": 0.001,
+          "unit": "kWh"
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算発電電力量リセット設定",
+          "en": "Cumulative power generation output reset setting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "瞬時ガス消費量計測値",
+          "en": "Measured instantaneous gas consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "multipleOf": 0.001,
+          "unit": "m3/h"
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量計測値",
+          "en": "Measured cumulative gas consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "multipleOf": 0.001,
+          "unit": "m3"
+        }
+      },
+      "0xC9": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量リセット設定",
+          "en": "Cumulative gas consumption reset setting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xCA": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "C",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "発電動作設定",
+              "en": "Power generation setting"
+            },
+            "accessRule": {
+              "get": "notApplicable",
+              "set": "optional",
+              "inf": "notApplicable"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "発電動作設定",
+              "en": "Power generation setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          }
+        ]
+      },
+      "0xCB": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "発電動作状態",
+          "en": "Power generation status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "発電中",
+                "en": "Generating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "停止中",
+                "en": "Stopped"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "アイドル中",
+                "en": "Idling"
+              }
+            }
+          ]
+        }
+      },
+      "0xCC": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "宅内瞬時消費電力計測値",
+          "en": "Measured inhouse instantaneous power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xCD": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "宅内積算消費電力量計測値",
+          "en": "Measured inhouse cumulative power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "multipleOf": 0.001,
+          "unit": "kWh"
+        }
+      },
+      "0xCE": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "宅内積算消費電力量リセット設定",
+          "en": "In-house cumulative power consumption reset"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "系統連系状態",
+          "en": "System interconnected type"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "state": {
+                "ja": "系統連系（逆潮流可）",
+                "en": "System-interconnected type (reverse power flow acceptable)"
+              }
+            },
+            {
+              "edt": "0x01",
+              "state": {
+                "ja": "独立",
+                "en": "Independent type"
+              }
+            },
+            {
+              "edt": "0x02",
+              "state": {
+                "ja": "系統連系（逆潮流不可）",
+                "en": "System-interconnected type(reverse power flow not acceptable)"
+              }
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残湯量計測値",
+          "en": "Measured remaining hot water amount"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "タンク容量値",
+          "en": "Tank capacity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      }
+    }
+  }
+}

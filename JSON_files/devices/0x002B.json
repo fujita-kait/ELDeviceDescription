@@ -1,0 +1,109 @@
+{
+  "0x002B": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "人体位置センサ",
+      "en": "Human body location sensor"
+    },
+    "elProperties": {
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "人体ＩＤ数最大値",
+          "en": "Maximum number of human body ID’s"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-128_u16"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "人体検知位置２",
+          "en": "Human body detection location 2"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "X",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-254"
+                  },
+                  {
+                    "$ref": "#/definitions/state_Undefined-FF"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Y",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-254"
+                  },
+                  {
+                    "$ref": "#/definitions/state_Undefined-FF"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Z",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-254"
+                  },
+                  {
+                    "$ref": "#/definitions/state_Undefined-FF"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "存在人体情報",
+          "en": "Human body existence information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_16"
+        }
+      }
+    }
+  }
+}

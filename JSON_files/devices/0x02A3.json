@@ -1,0 +1,68 @@
+{
+  "0x02A3": {
+    "validRelease": {
+      "from": "I",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "照明システム",
+      "en": "Lighting system"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "照度レベル設定",
+          "en": "Illuminance level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "シーン制御設定",
+          "en": "Scene control setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "シーン制御設定可能数",
+          "en": "Number that can assign scene control setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253"
+        }
+      }
+    }
+  }
+}

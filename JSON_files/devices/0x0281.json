@@ -1,0 +1,300 @@
+{
+  "0x0281": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "水流量メータ",
+      "en": "Water flow meter"
+    },
+    "elProperties": {
+      "0xD0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水流量メータ区分",
+          "en": "Water flow meter classification"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "上水",
+                "en": "running water"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "中水",
+                "en": "recycled water"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "下水",
+                "en": "sewage water"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "その他",
+                "en": "other water"
+              }
+            }
+          ]
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "所有者区分",
+          "en": "Owner classification"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "指定なし",
+                "en": "Not specified"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "事業体",
+                "en": "Public waterworks company"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "民間会社",
+                "en": "Private sector company"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "個人",
+                "en": "Individual"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算水流量計測値",
+          "en": "Measured Cumulative amount of flowing water"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "m3",
+          "coefficient": [
+            "0xE1"
+          ]
+        },
+        "note": {
+          "ja": "0xE1の値を乗算する必要あり",
+          "en": "It is necessary to mutiply the value of 0xE1"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算水流量計測値単位",
+          "en": "Unit for measured Cumulative amounts of flowing water"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            },
+            {
+              "edt": "0x04",
+              "numericValue": 0.0001
+            },
+            {
+              "edt": "0x05",
+              "numericValue": 1e-05
+            },
+            {
+              "edt": "0x06",
+              "numericValue": 1e-06
+            }
+          ]
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算水流量計測値履歴",
+          "en": "Historical data of measured cumulative amounts of flowing water"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 4,
+          "minItems": 48,
+          "maxItems": 48,
+          "items": {
+            "$ref": "#/definitions/number_0-999999999",
+            "unit": "m3",
+            "multipleOf": 0.001,
+            "coefficient": [
+              "0xE1"
+            ]
+          }
+        },
+        "note": {
+          "ja": "0xE1の値を乗算する必要あり",
+          "en": "It is necessary to mutiply the value of 0xE1"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検針データ異常検知状態",
+          "en": "Detection of abnormal value in metering data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "セキュリティデータ情報",
+          "en": "Security data information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_4"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ID番号設定",
+          "en": "ID number setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        },
+        "note": {
+          "ja": "ASCII code。初期値は '000000' ",
+          "en": "ASCII code. Itinital value is '000000' "
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検定満期情報",
+          "en": "Verification expiration information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        },
+        "note": {
+          "ja": "ASCIIコード、YYYYMM",
+          "en": "ASCII code, YYYYMM."
+        }
+      }
+    }
+  }
+}

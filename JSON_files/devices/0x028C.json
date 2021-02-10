@@ -1,0 +1,397 @@
+{
+  "0x028C": {
+    "validRelease": {
+      "from": "H",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "スマート灯油メータ",
+      "en": "Smart kerosense meter"
+    },
+    "elProperties": {
+      "0xD0": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "日時付積算灯油消費量計測値情報",
+          "en": "Measured cumulative kerosene consumption information with date and time"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_11"
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "灯油消費量履歴情報",
+          "en": "Historical information of cumulative kerosene consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_109"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "所有者区分設定",
+          "en": "Owner category setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "指定無し",
+                "en": "Not specified"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "灯油販売",
+                "en": "Kerosene sales"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "民間会社",
+                "en": "Private-sector company"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "個人",
+                "en": "Indivisual"
+              }
+            }
+          ]
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算灯油消費量計測値",
+          "en": "Measured cumulative kerosene consumption"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "L",
+          "multipleOf": 0.001
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算灯油消費量計測値単位",
+          "en": "Units for measured cumulative kerosene consumption"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            },
+            {
+              "edt": "0x04",
+              "numericValue": 0.0001
+            },
+            {
+              "edt": "0x05",
+              "numericValue": 1e-05
+            },
+            {
+              "edt": "0x06",
+              "numericValue": 1e-06
+            }
+          ]
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算灯油消費量履歴情報",
+          "en": "Historical information of cumulative kerosene consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_194"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算灯油消費量履歴収集日設定",
+          "en": "Collection date setting for history of cumulative kerosene consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検針データ異常検知状態",
+          "en": "Meter reading data abnormality detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "セキュリティデータ情報",
+          "en": "Security data information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_10"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル",
+          "en": "Residual volume control warning level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "レベル１",
+                "en": "Level 1"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "レベル２",
+                "en": "Level 2"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "レベル３",
+                "en": "Level 3"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "無し",
+                "en": "None"
+              }
+            }
+          ]
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル１",
+          "en": "Residual volume control warning level 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル２",
+          "en": "Residual volume control warning level 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残量管理警告レベル３",
+          "en": "Residual volume control warning level 3"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "微少漏洩タイマ値（灯油流量継続）",
+          "en": "Slight leak timer value (kerosene flow rate continuation)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ID 番号設定",
+          "en": "ID number setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        }
+      },
+      "0xEF": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検定満期設定",
+          "en": "Verification expiration setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        }
+      }
+    }
+  }
+}

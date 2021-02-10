@@ -1,0 +1,142 @@
+{
+  "0x0027": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "通過センサ",
+      "en": "Passage sensor"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検知閾値レベル設定",
+          "en": "Detection threshold level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xBE": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通過検知ホールド時間設定値",
+          "en": " Passage detection hold time"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "ms"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通過検知方向状態",
+          "en": "Passage detection direction"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "通過無し",
+                "en": "No passage"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "N",
+                "en": "N"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "NE",
+                "en": "NE"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "E",
+                "en": "E"
+              }
+            },
+            {
+              "edt": "0x34",
+              "state": {
+                "ja": "SE",
+                "en": "SE"
+              }
+            },
+            {
+              "edt": "0x35",
+              "state": {
+                "ja": "S",
+                "en": "S"
+              }
+            },
+            {
+              "edt": "0x36",
+              "state": {
+                "ja": "SW",
+                "en": "SW"
+              }
+            },
+            {
+              "edt": "0x37",
+              "state": {
+                "ja": "W",
+                "en": "W"
+              }
+            },
+            {
+              "edt": "0x38",
+              "state": {
+                "ja": "NW",
+                "en": "NW"
+              }
+            },
+            {
+              "edt": "0x39",
+              "state": {
+                "ja": "通過方向特定不可",
+                "en": "Direction unknown"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

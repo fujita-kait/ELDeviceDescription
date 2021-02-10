@@ -1,0 +1,211 @@
+{
+  "0x0267": {
+    "validRelease": {
+      "from": "D",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "散水器（庭用）",
+      "en": "Garden sprinkler"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "散水弁開閉設定",
+          "en": "Sprinkle valve open/close setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "自動 ON",
+                "en": "automatic ON"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "手動 ON",
+                "en": "manual ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "手動 OFF",
+                "en": "manual OFF"
+              }
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水やり間隔設定",
+          "en": "Sprinkle interval setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "切",
+                "en": "OFF"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "毎日",
+                "en": "daily"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "1日おき",
+                "en": "every other day"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "2日おき",
+                "en": "every 3 days"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "週１回",
+                "en": "once a week"
+              }
+            }
+          ]
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水やり回数設定",
+          "en": "Number of sprinkles setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "１番目 ON",
+                "en": "first ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "２番目 ON",
+                "en": "second ON"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "両方 ON",
+                "en": "both ON"
+              }
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水やり時刻設定１",
+          "en": "Sprinkle time setting 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水やり時刻設定２",
+          "en": "Sprinkle time setting 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水やり時間設定",
+          "en": "Sprinkle duration setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-59",
+          "unit": "minutes"
+        }
+      }
+    }
+  }
+}

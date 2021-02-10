@@ -1,0 +1,377 @@
+{
+  "0x0139": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "加湿器",
+      "en": "Humidifier"
+    },
+    "elProperties": {
+      "0x94": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ予約設定",
+          "en": "Reservation set of OFF timer"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x96": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ相対時間設定値",
+          "en": "Relative time value set of OFF timer"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内相対湿度計測値",
+          "en": "Measured value of room relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加湿設定１",
+          "en": "Humidifying setting 1"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "required_c",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-100percent"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x70",
+                  "state": {
+                    "ja": "自動設定",
+                    "en": "Automatic setting"
+                  }
+                },
+                {
+                  "edt": "0x71",
+                  "state": {
+                    "ja": "連続運転",
+                    "en": "Continuous operation"
+                  }
+                },
+                {
+                  "edt": "0x72",
+                  "state": {
+                    "ja": "間欠運転",
+                    "en": "Intermittent operation"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "note": {
+          "ja": "0xC0または0xC1のいずれかが必須",
+          "en": "Either 0xC0 or 0xC1 is required."
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加湿設定２",
+          "en": "Humidifying setting 2"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "required_c",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-3"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x70",
+                  "state": {
+                    "ja": "自動設定",
+                    "en": "Automatic setting"
+                  }
+                },
+                {
+                  "edt": "0x71",
+                  "state": {
+                    "ja": "連続運転",
+                    "en": "Continuous operation"
+                  }
+                },
+                {
+                  "edt": "0x72",
+                  "state": {
+                    "ja": "間欠運転",
+                    "en": "Intermittent operation"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "note": {
+          "ja": "0xC0または0xC1のいずれかが必須",
+          "en": "Either 0xC0 or 0xC1 is required."
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "イオン放出設定",
+          "en": "Ion emission setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "搭載イオン放出設定",
+          "en": "Implemented ion emission method"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "negativeIonMethod",
+              "descriptions": {
+                "ja": "マイナスイオン方式",
+                "en": "negative ion method"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIonMethod",
+              "descriptions": {
+                "ja": "クラスタイオン方式",
+                "en": "cluster ion method"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "特別運転モード設定",
+          "en": "Special operation mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "ozone",
+              "descriptions": {
+                "ja": "のど乾燥抑制",
+                "en": "Throat dry prevention"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "drying",
+              "descriptions": {
+                "ja": "静音運転",
+                "en": "Quiet operation"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水量レベル",
+          "en": "Water amount level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_40-6"
+        }
+      }
+    }
+  }
+}

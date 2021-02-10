@@ -1,0 +1,285 @@
+{
+  "0x0156": {
+    "validRelease": {
+      "from": "I",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "業務用パッケージエアコン室内機（設備用を除く）",
+      "en": "Package-type commercial air conditioner (indoor unit) (except those for facilities)"
+    },
+    "elProperties": {
+      "0xAC": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "サーモ状態",
+          "en": "Thermostat state"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xAE": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動運転時運転モード状態",
+          "en": "Current function (automatic operation mode)"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "冷房",
+                "en": "Cooling"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "暖房",
+                "en": "Heating"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "除湿",
+                "en": "Dehumidification"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "送風",
+                "en": "Air circulation"
+              }
+            }
+          ]
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転モード設定",
+          "en": "Operation mode setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動",
+                "en": "Automatic"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "冷房",
+                "en": "Cooling"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "暖房",
+                "en": "Heating"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "除湿",
+                "en": "Dehumidification"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "送風",
+                "en": "Air circulation"
+              }
+            }
+          ]
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定値",
+          "en": "Temperature setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-50Celsius"
+        }
+      },
+      "0xBB": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内機温度計測値",
+          "en": "Measured indoor unit temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-127-125Celsius"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x7E",
+                  "state": {
+                    "ja": "計測値を返せない",
+                    "en": "When the measurement value cannot be returned."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "グループ情報",
+          "en": "Group information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_1-253"
+            },
+            {
+              "$ref": "#/definitions/state_NoSetting"
+            }
+          ]
+        }
+      },
+      "0xDB": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内機消費電力範囲",
+          "en": "Power consumption range for indoor units"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "state": {
+                "ja": "未定",
+                "en": "Undefined"
+              }
+            },
+            {
+              "edt": "0x01",
+              "state": {
+                "ja": "50W未満",
+                "en": "up to 50W"
+              }
+            },
+            {
+              "edt": "0x02",
+              "state": {
+                "ja": "50W以上〜100W未満",
+                "en": "50W-100W"
+              }
+            },
+            {
+              "edt": "0x03",
+              "state": {
+                "ja": "100W以上〜150W未満",
+                "en": "100W-150W"
+              }
+            },
+            {
+              "edt": "0x04",
+              "state": {
+                "ja": "150W以上〜200W未満",
+                "en": "150W-200W"
+              }
+            },
+            {
+              "edt": "0x05",
+              "state": {
+                "ja": "200W以上",
+                "en": "200W-"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

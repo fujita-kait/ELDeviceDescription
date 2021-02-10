@@ -1,0 +1,52 @@
+{
+  "0x001F": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "風速センサ",
+      "en": "Air speed sensor"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風速計測値",
+          "en": "Measured value of air speed"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "m/sec",
+          "multipleOf": 0.01
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風向",
+          "en": "Measured value of Air flow direction"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-360degree_u16"
+        }
+      }
+    }
+  }
+}

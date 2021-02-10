@@ -1,0 +1,479 @@
+{
+  "0x0EF0": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ノードプロファイル",
+      "en": "Node profile"
+    },
+    "elProperties": {
+      "0x80": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "動作状態",
+          "en": "Operating status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0x82": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Version情報",
+          "en": "Version information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_4"
+        },
+        "note": {
+          "ja": "1バイト目：メジャーバージョン。2バイト目：マイナーバージョン。3バイト目：電文形式をbitmapで示す。４バイト目：0x00",
+          "en": "1st byte: major version, 2nd byte: minor version, 3rd data: bitmap of data format, 4th byte: 0x00"
+        }
+      },
+      "0x83": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "識別番号",
+          "en": "Identification number"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_17"
+        },
+        "note": {
+          "ja": "1バイト目は0xFE。2〜4バイト目はメーカコード。残りは機器毎のユニーク値",
+          "en": "1st data is 0xFE. 2nd to 4th data is manufacture code. The rest should be unique to each device."
+        }
+      },
+      "0x88": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "異常発生状態",
+          "en": "Fault status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "異常あり",
+                "en": "Fault"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "異常なし",
+                "en": "No Fault"
+              }
+            }
+          ]
+        }
+      },
+      "0x89": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "異常内容",
+          "en": "Fault description"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-1004"
+        }
+      },
+      "0x8A": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "メーカコード",
+          "en": "Manufacture code"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        },
+        "note": {
+          "ja": "0xFFFFFF:実験用, 0x000077:神奈川工科大学",
+          "en": "0xFFFFFF:For experimental, 0x000077:KAIT"
+        }
+      },
+      "0x8B": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "事業場コード",
+          "en": "Business facility code"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0x8C": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "商品コード",
+          "en": "Product code"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_12"
+        }
+      },
+      "0x8D": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "製造番号",
+          "en": "Production number"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_12"
+        }
+      },
+      "0x8E": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "製造年月日",
+          "en": "Production date"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "date-time",
+          "size": 4
+        }
+      },
+      "0x9D": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "状変アナウンスプロパティマップ",
+          "en": "Status change announcement property map"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-17"
+        },
+        "note": {
+          "ja": "１バイト目は個数。プロパティ数が15個以下の場合は列挙、16個以上の場合はbitmap",
+          "en": "1st byte is count of property. If the count is less than 16, enumerate. Else, bitmap."
+        }
+      },
+      "0x9E": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Setプロパティマップ",
+          "en": "Set property map"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-17"
+        },
+        "note": {
+          "ja": "１バイト目は個数。プロパティ数が15個以下の場合は列挙、16個以上の場合はbitmap",
+          "en": "1st byte is count of property. If the count is less than 16, enumerate. Else, bitmap."
+        }
+      },
+      "0x9F": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "Getプロパティマップ",
+          "en": "Get property map"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-17"
+        },
+        "note": {
+          "ja": "１バイト目は個数。プロパティ数が15個以下の場合は列挙、16個以上の場合はbitmap",
+          "en": "1st byte is count of property. If the count is less than 16, enumerate. Else, bitmap."
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "個体識別情報",
+          "en": "Unique identifier data"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        },
+        "note": {
+          "ja": "ECHONET Lite SPECIFICATION 第２部6.11.1参照",
+          "en": "See ECHONET Lite SPECIFICATION Part 2 Chapter 6.11.1."
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自ノードインスタンス数",
+          "en": "Number of self-node instances"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        },
+        "note": {
+          "ja": "3 byteで数値を表す。ノードプロファイルオブジェクトのインスタンスは含まない",
+          "en": "3 byte data for integer. excluding node profile object instance"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自ノードクラス数",
+          "en": "Number of self-node classes"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-253_u16"
+        },
+        "note": {
+          "ja": "ノードプロファイルクラスを含む",
+          "en": "including node profile class"
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "インスタンスリスト通知",
+          "en": "Instance list notification"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "numberOfinstances",
+              "element": {
+                "$ref": "#/definitions/number_0-84"
+              }
+            },
+            {
+              "name": "instanceList",
+              "element": {
+                "type": "array",
+                "itemSize": 3,
+                "maxItems": 84,
+                "items": {
+                  "$ref": "#/definitions/raw_3"
+                }
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "インスタンスリストは機器オブジェクトの３バイトのEOJを列挙する",
+          "en": "Instance list is an array of EOJ(3 bytes)"
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自ノードインスタンスリストS",
+          "en": "Self-node instance list S"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "numberOfInstances",
+              "element": {
+                "$ref": "#/definitions/number_0-84"
+              }
+            },
+            {
+              "name": "instanceList",
+              "element": {
+                "type": "array",
+                "itemSize": 3,
+                "maxItems": 84,
+                "items": {
+                  "$ref": "#/definitions/raw_3"
+                }
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "インスタンスリストは３バイトのEOJを列挙する",
+          "en": "Instance list is an array of EOJ(3 bytes)"
+        }
+      },
+      "0xD7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自ノードクラスリストS",
+          "en": "Self-node class list S"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "numberOfClasses",
+              "element": {
+                "$ref": "#/definitions/number_1-8"
+              }
+            },
+            {
+              "name": "classList",
+              "element": {
+                "type": "array",
+                "itemSize": 2,
+                "maxItems": 8,
+                "items": {
+                  "$ref": "#/definitions/raw_2"
+                }
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "ノードプロファイルクラスは除く",
+          "en": "Excluding node profile class"
+        }
+      }
+    }
+  }
+}

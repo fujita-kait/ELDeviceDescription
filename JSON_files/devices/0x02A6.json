@@ -1,0 +1,268 @@
+{
+  "0x02A6": {
+    "validRelease": {
+      "from": "L",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ハイブリッド給湯機",
+      "en": "Hybrid water heater"
+    },
+    "firstRelease": "L",
+    "elProperties": {
+      "0xB0": {
+        "propertyName": {
+          "ja": "沸き上げ自動設定",
+          "en": "Automatic water heating setting"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動沸き上げ",
+                "en": "Auto Heating"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "手動沸き上げ停止",
+                "en": "Manual No Heating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "手動沸き上げ",
+                "en": "Manual Heating"
+              }
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "propertyName": {
+          "ja": "給湯沸き上げ中状態",
+          "en": "Water heating status"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xB3": {
+        "propertyName": {
+          "ja": "暖房沸き上げ中状態",
+          "en": "Heater status"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xB6": {
+        "propertyName": {
+          "ja": "補助熱源機給湯モード設定",
+          "en": "Hot water supply mode setting for auxiliary heat source machine"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xB7": {
+        "propertyName": {
+          "ja": "補助熱源機暖房モード設定",
+          "en": "Heater mode setting for auxiliary heat source machine"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xB8": {
+        "propertyName": {
+          "ja": "太陽光発電連携モード設定",
+          "en": "Linkage mode setting for solar power generation"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "モード切",
+                "en": "Mode off"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "自家消費",
+                "en": "Household consumption"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "売電優先",
+                "en": "Prioritizing electricity sales"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "経済",
+                "en": "Economic efficiency"
+              }
+            }
+          ]
+        }
+      },
+      "0xB9": {
+        "propertyName": {
+          "ja": "太陽光発電利用時間",
+          "en": "Solar power generations utilization time"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "Start time",
+              "element": {
+                "type": "time",
+                "size": 2
+              }
+            },
+            {
+              "name": "End time",
+              "element": {
+                "type": "time",
+                "size": 2
+              }
+            }
+          ]
+        }
+      },
+      "0xC3": {
+        "propertyName": {
+          "ja": "給湯中状態",
+          "en": "Hot water supply status"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE1": {
+        "propertyName": {
+          "ja": "残湯量計測値",
+          "en": "Measured amount of hot water remaining in tank"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xE2": {
+        "propertyName": {
+          "ja": "タンク容量値",
+          "en": "Tank capacity"
+        },
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      }
+    }
+  }
+}

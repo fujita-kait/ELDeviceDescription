@@ -1,0 +1,233 @@
+{
+  "0x03BB": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "炊飯器",
+      "en": "Rice cooker"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "炊飯予約設定",
+          "en": "Rice cooking reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "炊飯予約設定時刻設定値",
+          "en": "Set value of rice cooking reservation setting time"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "炊飯予約設定相対時間設定値",
+          "en": "Set value of rice cooking reservation setting relative time"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "蓋開閉状態",
+          "en": "Cover open/close status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "炊飯状態",
+          "en": "Rice cooking status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "停止",
+                "en": "Stop"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予熱",
+                "en": "Preheating"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "炊飯",
+                "en": "Rice cooking"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "蒸らし",
+                "en": "Steaming"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "炊飯完了",
+                "en": "Rice cooking completion"
+              }
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "炊飯制御設定",
+          "en": "Rice cooking control setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "炊飯開始・炊飯再開",
+                "en": "Rice cooking start/restart"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "炊飯一時停止",
+                "en": "Rice cooking suspension"
+              }
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "保温設定",
+          "en": "Warmer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "内なべ取り外し状態",
+          "en": "Inner pot removal status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "蓋取り外し状態",
+          "en": "Cover removal status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      }
+    }
+  }
+}

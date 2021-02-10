@@ -1,0 +1,160 @@
+{
+  "0x0292": {
+    "validRelease": {
+      "from": "K",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "固体発光光源用照明",
+      "en": "Lighting for solid light-emitting source"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ON タイマ予約設定",
+          "en": "ON timer reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x94": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFF タイマ予約設定",
+          "en": "OFF timer reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0x95": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ時刻設定値",
+          "en": "OFF timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "光源数",
+          "en": "Number of light sources"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-253"
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "光源動作状態リスト",
+          "en": "List of the light source operation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-253"
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "光源光出力設定値リスト",
+          "en": "List of the light source optical output setting values"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-253"
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "光源色温度設定値リスト",
+          "en": "List of light source color temperature setting values"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-253"
+        }
+      }
+    }
+  }
+}

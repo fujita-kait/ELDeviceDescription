@@ -1,0 +1,798 @@
+{
+  "0x03B7": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "冷凍冷蔵庫",
+      "en": "Refrigerator"
+    },
+    "elProperties": {
+      "0xA0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "急速冷凍動作設定",
+          "en": "Quick freeze function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "通常冷凍",
+                "en": "normal operation"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "急速冷凍",
+                "en": "quick freeze"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "急速冷凍待機",
+                "en": "standby for quick freezing"
+              }
+            }
+          ]
+        }
+      },
+      "0xA1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "急速冷蔵動作設定",
+          "en": "Quick refrigeration function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "通常冷蔵",
+                "en": "normal operation"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "急速冷蔵",
+                "en": "quick refrigeration"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "急速冷蔵待機",
+                "en": "standby for quick refrigeration"
+              }
+            }
+          ]
+        }
+      },
+      "0xA4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "製氷許可設定",
+          "en": "Icemaker setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "製氷許可",
+                "en": "enable icemaker"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "製氷禁止",
+                "en": "disable icemaker"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "製氷一定時間禁止",
+                "en": "temporarily disable icemaker"
+              }
+            }
+          ]
+        }
+      },
+      "0xA5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "製氷動作状態",
+          "en": "Icemaker operation status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xA6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "製氷用給水タンク状態",
+          "en": "Icemaker tank status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "水あり",
+                "en": "Water in tank"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "水なし",
+                "en": "No water"
+              }
+            }
+          ]
+        }
+      },
+      "0xA8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷蔵室加湿動作設定",
+          "en": "Refrigerator compartment humidification function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xA9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "野菜室加湿動作設定",
+          "en": "Vegetable compartment humidification function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xAD": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "脱臭動作設定",
+          "en": "Deodorization function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ドア開閉状態",
+          "en": "Door open/close status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ドア開放警告状態",
+          "en": "Door open warning"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷蔵室ドア開閉状態",
+          "en": "Refrigerator compartment door status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷凍室ドア開閉状態",
+          "en": "Freezer compartment door status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "氷温室ドア開閉状態",
+          "en": "Ice compartment door status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "野菜室ドア開閉状態",
+          "en": "Vegetable compartment door status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "切換室ドア開閉状態",
+          "en": "Multi-refrigerating mode compartment door status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷蔵室温度計測値",
+          "en": "Measured refrigerator compartment temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷凍室温度計測値",
+          "en": "Measured freezer compartment temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "氷温室温度計測値",
+          "en": "Measured subzero-fresh compartment temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "野菜室温度計測値",
+          "en": "Measured vegetable compartment temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "切替室室温度計測値",
+          "en": "Measured multi-refrigerating mode compartment temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xD8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "圧縮機回転数レベル",
+          "en": "Compressor rotation speed"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "maxLevel",
+              "element": {
+                "$ref": "#/definitions/number_1-255"
+              }
+            },
+            {
+              "name": "level",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "0x00:停止",
+          "en": "0x00:Stopped"
+        }
+      },
+      "0xDA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "消費電流計測値",
+          "en": "Measured electric current consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "A",
+          "multipleOf": 0.1
+        }
+      },
+      "0xDC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定格消費電力値",
+          "en": "Rated power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "設定可能温度レベル最大値",
+          "en": "Maximum allowable temperature setting level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "refrigerator",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "freezer",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "ice",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "vegetable",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "multi",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "reserved",
+              "element": {
+                "$ref": "#/definitions/raw_3"
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "0x00:停止",
+          "en": "0x00:Stopped"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷蔵室温度設定値",
+          "en": "Refrigerator compartment temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷凍室温度設定値",
+          "en": "Freezer compartment temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "氷温室温度設定値",
+          "en": "Ice temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "野菜室温度設定値",
+          "en": "Vegetable compartment temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "切換室温度設定値",
+          "en": "Multi-refrigerating mode compartment temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷蔵室温度レベル設定",
+          "en": "Refrigerator compartment temperature level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        },
+        "note": {
+          "ja": "最大値はEPC=0xE0の値",
+          "en": "maximum value is at EPC=0xE0"
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷凍室温度レベル設定",
+          "en": "Freezer compartment temperature level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        },
+        "note": {
+          "ja": "最大値はEPC=0xE0の値",
+          "en": "maximum value is at EPC=0xE0"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "氷温室温度レベル設定",
+          "en": "ice compartment temperature level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        },
+        "note": {
+          "ja": "最大値はEPC=0xE0の値",
+          "en": "maximum value is at EPC=0xE0"
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "野菜室温度レベル設定",
+          "en": "Vegetable compartment temperature level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        },
+        "note": {
+          "ja": "最大値はEPC=0xE0の値",
+          "en": "maximum value is at EPC=0xE0"
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "切換室温度レベル設定",
+          "en": "Multi-refrigerating mode compartment temperature level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        },
+        "note": {
+          "ja": "最大値はEPC=0xE0の値",
+          "en": "maximum value is at EPC=0xE0"
+        }
+      }
+    }
+  }
+}

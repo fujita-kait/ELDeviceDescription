@@ -1,0 +1,2354 @@
+{
+  "0x027E": {
+    "oneOf": [
+      {
+        "validRelease": {
+          "from": "B",
+          "to": "C"
+        },
+        "className": {
+          "ja": "電気自動車充放電システム",
+          "en": "EV charge and discharge system"
+        },
+        "elProperties": {
+          "0xC0": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "V2H使用可能容量値１",
+              "en": "V2H stored electricity 1"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xC1": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "V2H使用可能容量値２",
+              "en": "V2H stored electricity 2"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xC2": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "V2H使用可能残容量１",
+              "en": "V2H remaining available capacity 1"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xC3": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "V2H使用可能残容量２",
+              "en": "V2H remaining available capacity 2"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xC4": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "V2H使用可能残容量３",
+              "en": "V2H remaining available capacity 3"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xC5": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "定格充電能力",
+              "en": "Rated charge capacity"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xC6": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "定格放電能力",
+              "en": "Rated discharge capacity"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xC7": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "充放電可否状態",
+              "en": "Chargeable/dischargeable status"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "required"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xC8": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "最小最大充電電力値",
+              "en": "Min/max charge electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_8"
+            }
+          },
+          "0xC9": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "最小最大放電電力値",
+              "en": "Min/max discharge electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_8"
+            }
+          },
+          "0xCA": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "最小最大充電電流値",
+              "en": "Minimum/maximum charging current"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xCB": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "最小最大放電電流値",
+              "en": "Minimum/maximum discharging current"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xD0": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "使用容量値１",
+              "en": "Used capacity 1"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xD1": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "使用容量値２",
+              "en": "Used capacity 2"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xD2": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "定格電圧",
+              "en": "Rated voltage"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xD3": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "瞬時充放電電力計測値",
+              "en": "Measured instantaneous charge/discharge electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xD4": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "瞬時充放電電流計測値",
+              "en": "Measured instantaneous charge/discharge current"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xD5": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "瞬時充放電電圧計測値",
+              "en": "Measured instantaneous charge/discharge voltage"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xD6": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "積算放電電力量計測値",
+              "en": "Measured cumulative discharge electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xD7": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "積算放電電力量リセット設定",
+              "en": "Cumulative discharge electric energy reset setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xD8": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "積算充電電力量計測値",
+              "en": "Measured cumulative charge electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xD9": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "積算充電電力量リセット設定",
+              "en": "Cumulative charge electric energy reset setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xDA": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "運転モード設定",
+              "en": "Operation mode setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "required"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xDB": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "系統連携状態",
+              "en": "System-interconnected type"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xE2": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "電池残容量１",
+              "en": "Remaining battery capacity 1"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xE3": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "電池残容量２",
+              "en": "Remaining battery capacity 2"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xE4": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "電池残容量３",
+              "en": "Remaining battery capacity 3"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xE5": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "劣化状態",
+              "en": "Deterioration status"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          "0xE7": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "充電量設定値１",
+              "en": "Charging amount setting 1"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xE8": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "放電量設定値１",
+              "en": "Discharging amount setting 1"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xE9": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "充電量設定値２",
+              "en": "Charging amount setting 2"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xEA": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "放電量設定値２",
+              "en": "Discharging amount setting 2"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xEB": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "充電電力設定値",
+              "en": "Charge electric energy setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xEC": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "放電電力設定値",
+              "en": "Discharge electric energy setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_4"
+            }
+          },
+          "0xED": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "充電電流設定値",
+              "en": "Charge current setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          },
+          "0xEE": {
+            "validRelease": {
+              "from": "B",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "放電電流設定値",
+              "en": "Disharge current setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_2"
+            }
+          }
+        }
+      },
+      {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "className": {
+          "ja": "電気自動車充放電器",
+          "en": "Electric vehicle charger/discharger"
+        },
+        "elProperties": {
+          "0xC0": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の放電可能容量値1",
+              "en": "Dischargeable capacity of vehicle mounted battery 1"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "Wh"
+            },
+            "note": {
+              "ja": "車載電池の放電可能容量値1 は、電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+              "en": "The installation of \"Dischargeable capacity of vehicle mounted battery 1\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
+            }
+          },
+          "0xC1": {
+            "oneOf": [
+              {
+                "validRelease": {
+                  "from": "D",
+                  "to": "F"
+                },
+                "propertyName": {
+                  "ja": "車載電池の放電可能容量値2",
+                  "en": "Dischargeable capacity of vehicle mounted battery 2"
+                },
+                "accessRule": {
+                  "get": "required_c",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "G",
+                  "to": "latest"
+                },
+                "propertyName": {
+                  "ja": "車載電池の放電可能容量値2",
+                  "en": "Dischargeable capacity of vehicle mounted battery 2"
+                },
+                "accessRule": {
+                  "get": "optional",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              }
+            ]
+          },
+          "0xC2": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の放電可能残容量1",
+              "en": "Remaining dischargeable capacity of vehicle mounted battery 1"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "Wh"
+            },
+            "note": {
+              "ja": "車載電池の放電可能残容量1、車載電池の放電可能残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+              "en": "The installation of \"Remaining dischargeable capacity of vehicle mounted battery 1\" or \"Remaining dischargeable capacity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
+            }
+          },
+          "0xC3": {
+            "oneOf": [
+              {
+                "validRelease": {
+                  "from": "D",
+                  "to": "F"
+                },
+                "propertyName": {
+                  "ja": "車載電池の放電可能残容量2",
+                  "en": "Remaining dischargeable capacity of vehicle mounted battery 2"
+                },
+                "accessRule": {
+                  "get": "required_c",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "G",
+                  "to": "latest"
+                },
+                "propertyName": {
+                  "ja": "車載電池の放電可能残容量2",
+                  "en": "Remaining dischargeable capacity of vehicle mounted battery 2"
+                },
+                "accessRule": {
+                  "get": "optional",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              }
+            ]
+          },
+          "0xC4": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の放電可能残容量3",
+              "en": "Remaining dischargeable capacity of vehicle mounted battery 3"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-100percent"
+            },
+            "note": {
+              "ja": "車載電池の放電可能残容量1、車載電池の放電可能残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+              "en": "The installation of \"Remaining dischargeable capacity of vehicle mounted battery 1\" or \"Remaining dischargeable capacity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
+            }
+          },
+          "0xC5": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "定格充電能力",
+              "en": "Rated charge capacity"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "W"
+            }
+          },
+          "0xC6": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "定格放電能力",
+              "en": "Rated discharge capacity"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "W"
+            }
+          },
+          "0xC7": {
+            "oneOf": [
+              {
+                "validRelease": {
+                  "from": "D",
+                  "to": "F"
+                },
+                "propertyName": {
+                  "ja": "車両接続・充放電可否状態",
+                  "en": "Vehicle connection and chargeable/dischargeable status"
+                },
+                "accessRule": {
+                  "get": "required",
+                  "set": "notApplicable",
+                  "inf": "required"
+                },
+                "atomic": "0xCD",
+                "data": {
+                  "type": "state",
+                  "size": 1,
+                  "enum": [
+                    {
+                      "edt": "0x30",
+                      "state": {
+                        "ja": "車両未接続",
+                        "en": "Not Connected"
+                      }
+                    },
+                    {
+                      "edt": "0x40",
+                      "state": {
+                        "ja": "車両接続・充電不可・放電不可",
+                        "en": "Connected"
+                      }
+                    },
+                    {
+                      "edt": "0x41",
+                      "state": {
+                        "ja": "車両接続・充電可・放電不可",
+                        "en": "Chargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x42",
+                      "state": {
+                        "ja": "車両接続・充電不可・放電可",
+                        "en": "Dischargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x43",
+                      "state": {
+                        "ja": "車両接続・充電可・放電可",
+                        "en": "Chargeable and Dischargeable"
+                      }
+                    }
+                  ]
+                },
+                "note": {
+                  "ja": "Atomic operation with EPC=0xCD",
+                  "en": "Atomic operation with EPC=0xCD"
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "G",
+                  "to": "I"
+                },
+                "propertyName": {
+                  "ja": "車両接続・充放電可否状態",
+                  "en": "Vehicle connection and chargeable/dischargeable status"
+                },
+                "accessRule": {
+                  "get": "required",
+                  "set": "notApplicable",
+                  "inf": "required"
+                },
+                "atomic": "0xCD",
+                "data": {
+                  "type": "state",
+                  "size": 1,
+                  "enum": [
+                    {
+                      "edt": "0x30",
+                      "state": {
+                        "ja": "車両未接続",
+                        "en": "Not Connected"
+                      }
+                    },
+                    {
+                      "edt": "0x40",
+                      "state": {
+                        "ja": "車両接続・充電不可・放電不可",
+                        "en": "Connected"
+                      }
+                    },
+                    {
+                      "edt": "0x41",
+                      "state": {
+                        "ja": "車両接続・充電可・放電不可",
+                        "en": "Chargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x42",
+                      "state": {
+                        "ja": "車両接続・充電不可・放電可",
+                        "en": "Dischargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x43",
+                      "state": {
+                        "ja": "車両接続・充電可・放電可",
+                        "en": "Chargeable and Dischargeable"
+                      }
+                    },
+                    {
+                      "edt": "0xFF",
+                      "state": {
+                        "ja": "不定",
+                        "en": "Undefined"
+                      }
+                    }
+                  ]
+                },
+                "note": {
+                  "ja": "Atomic operation with EPC=0xCD",
+                  "en": "Atomic operation with EPC=0xCD"
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "J",
+                  "to": "latest"
+                },
+                "propertyName": {
+                  "ja": "車両接続・充放電可否状態",
+                  "en": "Vehicle connection and chargeable/dischargeable status"
+                },
+                "accessRule": {
+                  "get": "required",
+                  "set": "notApplicable",
+                  "inf": "required"
+                },
+                "atomic": "0xCD",
+                "data": {
+                  "type": "state",
+                  "size": 1,
+                  "enum": [
+                    {
+                      "edt": "0x30",
+                      "state": {
+                        "ja": "車両未接続",
+                        "en": "Not Connected"
+                      }
+                    },
+                    {
+                      "edt": "0x40",
+                      "state": {
+                        "ja": "車両接続・充電不可・放電不可",
+                        "en": "Connected"
+                      }
+                    },
+                    {
+                      "edt": "0x41",
+                      "state": {
+                        "ja": "車両接続・充電可・放電不可",
+                        "en": "Chargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x42",
+                      "state": {
+                        "ja": "車両接続・充電不可・放電可",
+                        "en": "Dischargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x43",
+                      "state": {
+                        "ja": "車両接続・充電可・放電可",
+                        "en": "Chargeable and Dischargeable"
+                      }
+                    },
+                    {
+                      "edt": "0x44",
+                      "state": {
+                        "ja": "車両接続・充電可否不明",
+                        "en": "Unknown of Chargeability"
+                      }
+                    },
+                    {
+                      "edt": "0xFF",
+                      "state": {
+                        "ja": "不定",
+                        "en": "Undefined"
+                      }
+                    }
+                  ]
+                },
+                "note": {
+                  "ja": "Atomic operation with EPC=0xCD",
+                  "en": "Atomic operation with EPC=0xCD"
+                }
+              }
+            ]
+          },
+          "0xC8": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "最小最大充電電力値",
+              "en": "Minimum/maximum charging electric energy"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "object",
+              "properties": [
+                {
+                  "name": "minValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-999999999",
+                    "unit": "W"
+                  }
+                },
+                {
+                  "name": "maxValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-999999999",
+                    "unit": "W"
+                  }
+                }
+              ]
+            }
+          },
+          "0xC9": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "最小最大放電電力値",
+              "en": "Minimum/maximum discharging electric energy"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "object",
+              "properties": [
+                {
+                  "name": "minValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-999999999",
+                    "unit": "W"
+                  }
+                },
+                {
+                  "name": "maxValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-999999999",
+                    "unit": "W"
+                  }
+                }
+              ]
+            }
+          },
+          "0xCA": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "最小最大充電電流値",
+              "en": "Minimum/maximum charging current"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "object",
+              "properties": [
+                {
+                  "name": "minValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-32766",
+                    "unit": "A",
+                    "multipleOf": 0.1
+                  }
+                },
+                {
+                  "name": "maxValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-32766",
+                    "unit": "A",
+                    "multipleOf": 0.1
+                  }
+                }
+              ]
+            }
+          },
+          "0xCB": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "最小最大放電電流値",
+              "en": "Minimum/maximum discharging current"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "object",
+              "properties": [
+                {
+                  "name": "minValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-32766",
+                    "unit": "A",
+                    "multipleOf": 0.1
+                  }
+                },
+                {
+                  "name": "maxValue",
+                  "element": {
+                    "$ref": "#/definitions/number_0-32766",
+                    "unit": "A",
+                    "multipleOf": 0.1
+                  }
+                }
+              ]
+            }
+          },
+          "0xCC": {
+            "validRelease": {
+              "from": "G",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "充放電器タイプ",
+              "en": "Charger/Discharger type"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x11",
+                  "state": {
+                    "ja": "AC_CPLT",
+                    "en": "AC_CPLT"
+                  }
+                },
+                {
+                  "edt": "0x12",
+                  "state": {
+                    "ja": "AC_HLC（充電のみ）",
+                    "en": "AC_HLC_Charge"
+                  }
+                },
+                {
+                  "edt": "0x13",
+                  "state": {
+                    "ja": "AC_HLC（充放電可）",
+                    "en": "AC_HLC_ChargeDischarge"
+                  }
+                },
+                {
+                  "edt": "0x21",
+                  "state": {
+                    "ja": "DCタイプ_AA（充電のみ）",
+                    "en": "DC_AA_Charge"
+                  }
+                },
+                {
+                  "edt": "0x22",
+                  "state": {
+                    "ja": "DCタイプ_AA（充放電可）",
+                    "en": "DC_AA_ChargeDischarge"
+                  }
+                },
+                {
+                  "edt": "0x23",
+                  "state": {
+                    "ja": "DCタイプ_AA（放電のみ）",
+                    "en": "DC_AA_Discharge"
+                  }
+                },
+                {
+                  "edt": "0x31",
+                  "state": {
+                    "ja": "DCタイプ_BB（充電のみ）",
+                    "en": "DC_BB_Charge"
+                  }
+                },
+                {
+                  "edt": "0x32",
+                  "state": {
+                    "ja": "DCタイプ_BB（充放電可）",
+                    "en": "DC_BB_ChargeDischarge"
+                  }
+                },
+                {
+                  "edt": "0x33",
+                  "state": {
+                    "ja": "DCタイプ_BB（放電のみ）",
+                    "en": "DC_BB_Discharge"
+                  }
+                },
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "DCタイプ_EE（充電のみ）",
+                    "en": "DC_EE_Charge"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "DCタイプ_EE（充放電可）",
+                    "en": "DC_EE_ChargeDischarge"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "DCタイプ_EE（放電のみ）",
+                    "en": "DC_EE_Discharge"
+                  }
+                },
+                {
+                  "edt": "0x51",
+                  "state": {
+                    "ja": "DCタイプ_FF（充電のみ）",
+                    "en": "DC_FF_Charge"
+                  }
+                },
+                {
+                  "edt": "0x52",
+                  "state": {
+                    "ja": "DCタイプ_FF（充放電可）",
+                    "en": "DC_FF_ChargeDischarge"
+                  }
+                },
+                {
+                  "edt": "0x53",
+                  "state": {
+                    "ja": "DCタイプ_FF（放電のみ）",
+                    "en": "DC_FF_Discharge"
+                  }
+                }
+              ]
+            }
+          },
+          "0xCD": {
+            "validRelease": {
+              "from": "G",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車両接続確認",
+              "en": "Vehicle connection confirmation"
+            },
+            "accessRule": {
+              "get": "notApplicable",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x10",
+                  "state": {
+                    "ja": "接続確認",
+                    "en": "Connection confirmation"
+                  }
+                }
+              ]
+            },
+            "note": {
+              "ja": "車両接続確認は充放電器タイプがDC_タイプAA の場合のみ必須とする。",
+              "en": "Vehicle connection confirmation is only mandatory when the charger/discharger type is DC_type AA."
+            }
+          },
+          "0xCE": {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の充電可能容量値",
+              "en": "Chargeable capacity of vehicle mounted battery"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "Wh"
+            },
+            "note": {
+              "ja": "車載電池の充電可能容量値、車載電池の充電可能残容量値は電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。",
+              "en": "The installation of \"chargeable capacity of vehicle mounted battery\" and \"chargeable capacity of vehicle mounted battery\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger."
+            }
+          },
+          "0xCF": {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の充電可能残容量値",
+              "en": "Remaining chargeable capacity of vehicle mounted battery"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "Wh"
+            },
+            "note": {
+              "ja": "車載電池の充電可能容量値、車載電池の充電可能残容量値は電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。",
+              "en": "The installation of \"chargeable capacity of vehicle mounted battery\" and \"chargeable capacity of vehicle mounted battery\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger."
+            }
+          },
+          "0xD0": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の使用容量値1",
+              "en": "Used capacity of vehicle mounted battery 1 "
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "Wh"
+            },
+            "note": {
+              "ja": "車載電池の使用容量値1 は、電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+              "en": "The installation of \"Used capacity of vehicle mounted battery 1\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
+            }
+          },
+          "0xD1": {
+            "oneOf": [
+              {
+                "validRelease": {
+                  "from": "D",
+                  "to": "F"
+                },
+                "propertyName": {
+                  "ja": "車載電池の使用容量値2",
+                  "en": "Used capacity of vehicle mounted battery 2"
+                },
+                "accessRule": {
+                  "get": "required_c",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "G",
+                  "to": "latest"
+                },
+                "propertyName": {
+                  "ja": "車載電池の使用容量値2",
+                  "en": "Used capacity of vehicle mounted battery 2"
+                },
+                "accessRule": {
+                  "get": "optional",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              }
+            ]
+          },
+          "0xD2": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "定格電圧",
+              "en": "Rated voltage"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-32766",
+              "unit": "V"
+            }
+          },
+          "0xD3": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "瞬時充放電電力計測値",
+              "en": "Measured instantaneous charging/discharging electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_-999999999-999999999",
+              "unit": "W"
+            }
+          },
+          "0xD4": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "瞬時充放電電流計測値",
+              "en": "Measured instantaneous charging/discharging current"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_-32767-32766",
+              "unit": "Ah",
+              "multipleOf": 0.1
+            }
+          },
+          "0xD5": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "瞬時充放電電圧計測値",
+              "en": "Measured instantaneous charging/discharging voltage"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_-32767-32766",
+              "unit": "V"
+            }
+          },
+          "0xD6": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "積算放電電力量計測値",
+              "en": "Measured cumulative amount of discharging electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "kWh",
+              "multipleOf": 0.001
+            }
+          },
+          "0xD7": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "積算放電電力量リセット設定",
+              "en": "Cumulative amount of discharging electric energy reset setting"
+            },
+            "accessRule": {
+              "get": "notApplicable",
+              "set": "optional",
+              "inf": "notApplicable"
+            },
+            "data": {
+              "$ref": "#/definitions/state_RESET"
+            }
+          },
+          "0xD8": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "積算充電電力量計測値",
+              "en": "Measured cumulative amount of charging electric energy"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "kWh",
+              "multipleOf": 0.001
+            }
+          },
+          "0xD9": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "積算充電電力量リセット設定",
+              "en": "Cumulative amount of charging electric energy reset setting"
+            },
+            "accessRule": {
+              "get": "notApplicable",
+              "set": "optional",
+              "inf": "notApplicable"
+            },
+            "data": {
+              "$ref": "#/definitions/state_RESET"
+            }
+          },
+          "0xDA": {
+            "oneOf": [
+              {
+                "validRelease": {
+                  "from": "D",
+                  "to": "F"
+                },
+                "propertyName": {
+                  "ja": "運転モード設定",
+                  "en": "Operation mode setting"
+                },
+                "accessRule": {
+                  "get": "required",
+                  "set": "required",
+                  "inf": "required"
+                },
+                "data": {
+                  "type": "state",
+                  "size": 1,
+                  "enum": [
+                    {
+                      "edt": "0x41",
+                      "state": {
+                        "ja": "急速充電",
+                        "en": "Rapid charge"
+                      }
+                    },
+                    {
+                      "edt": "0x42",
+                      "state": {
+                        "ja": "充電",
+                        "en": "Charge"
+                      }
+                    },
+                    {
+                      "edt": "0x43",
+                      "state": {
+                        "ja": "放電",
+                        "en": "Discharge"
+                      }
+                    },
+                    {
+                      "edt": "0x44",
+                      "state": {
+                        "ja": "待機",
+                        "en": "standby"
+                      }
+                    },
+                    {
+                      "edt": "0x45",
+                      "state": {
+                        "ja": "テスト",
+                        "en": "Test"
+                      }
+                    },
+                    {
+                      "edt": "0x40",
+                      "state": {
+                        "ja": "その他",
+                        "en": "Other"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "G",
+                  "to": "M"
+                },
+                "propertyName": {
+                  "ja": "運転モード設定",
+                  "en": "Operation mode setting"
+                },
+                "accessRule": {
+                  "get": "required",
+                  "set": "required",
+                  "inf": "required"
+                },
+                "data": {
+                  "type": "state",
+                  "size": 1,
+                  "enum": [
+                    {
+                      "edt": "0x42",
+                      "state": {
+                        "ja": "充電",
+                        "en": "Charge"
+                      }
+                    },
+                    {
+                      "edt": "0x43",
+                      "state": {
+                        "ja": "放電",
+                        "en": "Discharge"
+                      }
+                    },
+                    {
+                      "edt": "0x44",
+                      "state": {
+                        "ja": "待機",
+                        "en": "standby"
+                      }
+                    },
+                    {
+                      "edt": "0x47",
+                      "state": {
+                        "ja": "停止",
+                        "en": "Idle"
+                      }
+                    },
+                    {
+                      "edt": "0x40",
+                      "state": {
+                        "ja": "その他",
+                        "en": "Other"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "N",
+                  "to": "latest"
+                },
+                "propertyName": {
+                  "ja": "運転モード設定",
+                  "en": "Operation mode setting"
+                },
+                "accessRule": {
+                  "get": "required",
+                  "set": "required",
+                  "inf": "required"
+                },
+                "data": {
+                  "type": "state",
+                  "size": 1,
+                  "enum": [
+                    {
+                      "edt": "0x42",
+                      "state": {
+                        "ja": "充電",
+                        "en": "Charge"
+                      }
+                    },
+                    {
+                      "edt": "0x43",
+                      "state": {
+                        "ja": "放電",
+                        "en": "Discharge"
+                      }
+                    },
+                    {
+                      "edt": "0x44",
+                      "state": {
+                        "ja": "待機",
+                        "en": "standby"
+                      }
+                    },
+                    {
+                      "edt": "0x46",
+                      "state": {
+                        "ja": "充放電",
+                        "en": "Charge and discharge"
+                      }
+                    },
+                    {
+                      "edt": "0x47",
+                      "state": {
+                        "ja": "停止",
+                        "en": "Idle"
+                      }
+                    },
+                    {
+                      "edt": "0x40",
+                      "state": {
+                        "ja": "その他",
+                        "en": "Other"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "0xDB": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "系統連系状態",
+              "en": "System-interconnected type"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "系統連系（逆潮流可）",
+                    "en": "Grid connection(reverse flow acceptable)"
+                  }
+                },
+                {
+                  "edt": "0x01",
+                  "state": {
+                    "ja": "独立",
+                    "en": "Independent operation"
+                  }
+                },
+                {
+                  "edt": "0x02",
+                  "state": {
+                    "ja": "系統連系（逆潮流不可）",
+                    "en": "Grid connection(reverse flow not acceptable)"
+                  }
+                }
+              ]
+            }
+          },
+          "0xDC": {
+            "validRelease": {
+              "from": "N",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "充電方式",
+              "en": "Charging method"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "optional",
+              "inf": "required"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "その他",
+                    "en": "others"
+                  }
+                },
+                {
+                  "edt": "0x01",
+                  "state": {
+                    "ja": "最大充電電力充電",
+                    "en": "maximum charging electric energy charging"
+                  }
+                },
+                {
+                  "edt": "0x02",
+                  "state": {
+                    "ja": "余剰電力充電",
+                    "en": "surplus electric energy charging"
+                  }
+                },
+                {
+                  "edt": "0x03",
+                  "state": {
+                    "ja": "指定電力充電",
+                    "en": "designated electric energy charging"
+                  }
+                },
+                {
+                  "edt": "0x04",
+                  "state": {
+                    "ja": "指定電流充電",
+                    "en": "designated current power charging"
+                  }
+                },
+                {
+                  "edt": "0x05",
+                  "state": {
+                    "ja": "買電電力指定充電",
+                    "en": "purchasing power designated electric energy charging"
+                  }
+                }
+              ]
+            },
+            "note": {
+              "ja": "運転モード設定(EPC=0xDA)に充電(0x42)，充放電（0x46）を設定した時の充電方式を示す。",
+              "en": "This property indicates the charging method when setting charging (0x42) and charging/discharging (0x46) to the operation mode setting (EPC=0xDA)."
+            }
+          },
+          "0xDD": {
+            "validRelease": {
+              "from": "N",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "放電方式",
+              "en": "Discharging method"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "optional",
+              "inf": "required"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "その他",
+                    "en": "others"
+                  }
+                },
+                {
+                  "edt": "0x01",
+                  "state": {
+                    "ja": "最大放電電力放電",
+                    "en": "maximum discharge electric energy discharging"
+                  }
+                },
+                {
+                  "edt": "0x02",
+                  "state": {
+                    "ja": "負荷追従放電",
+                    "en": "load following discharge"
+                  }
+                },
+                {
+                  "edt": "0x03",
+                  "state": {
+                    "ja": "指定電力放電",
+                    "en": "designated electric energy discharging"
+                  }
+                },
+                {
+                  "edt": "0x04",
+                  "state": {
+                    "ja": "指定電流放電",
+                    "en": "designated current power discharging"
+                  }
+                },
+                {
+                  "edt": "0x05",
+                  "state": {
+                    "ja": "買電電力指定放電",
+                    "en": "purchasing power designated electric energy discharging"
+                  }
+                }
+              ]
+            },
+            "note": {
+              "ja": "運転モード設定(EPC=0xDA)に放電(0x43)，充放電（0x46）を設定した時の放電方式を示す。",
+              "en": "This property indicates discharging method when setting discharging (0x43) to operation mode setting (EPC=0xDA), and discharging method when setting charging/discharging (0x46)"
+            }
+          },
+          "0xDE": {
+            "validRelease": {
+              "from": "N",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "買電電力設定値",
+              "en": "Purchasing power electric energy setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "W"
+            },
+            "note": {
+              "ja": "買電電力の上限値をW で指定する。充電方式が買電電力指定充電（0x05）または放電方式が買電電力指定放電(0x05)の場合有効になる",
+              "en": "This property specifies the highest value of the purchasing power electric energy in W. This shall be activated when charging method is purchasing power designated electric energy discharging (0x05), or discharging method is purchasing power designated electric energy charging (0x05)."
+            }
+          },
+          "0xDF": {
+            "validRelease": {
+              "from": "N",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "再連系許可設定",
+              "en": "Re-interconnection permission setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          },
+          "0xE2": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の電池残容量1",
+              "en": "Remaining stored electricity of vehicle mounted battery1"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "Wh"
+            },
+            "note": {
+              "ja": "車載電池の電池残容量1、車載電池の電池残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+              "en": "The installation of \"Remaining stored electricity of vehicle mounted battery 1\" or \"Remaining stored electricity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
+            }
+          },
+          "0xE3": {
+            "oneOf": [
+              {
+                "validRelease": {
+                  "from": "D",
+                  "to": "F"
+                },
+                "propertyName": {
+                  "ja": "車載電池の電池残容量2",
+                  "en": "Remaining stored electricity of vehicle mounted battery2"
+                },
+                "accessRule": {
+                  "get": "required_c",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              },
+              {
+                "validRelease": {
+                  "from": "G",
+                  "to": "latest"
+                },
+                "propertyName": {
+                  "ja": "車載電池の電池残容量2",
+                  "en": "Remaining stored electricity of vehicle mounted battery2"
+                },
+                "accessRule": {
+                  "get": "optional",
+                  "set": "notApplicable",
+                  "inf": "optional"
+                },
+                "data": {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                }
+              }
+            ]
+          },
+          "0xE4": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車載電池の電池残容量3",
+              "en": "Remaining stored electricity of vehicle mounted battery3"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-100percent"
+            },
+            "note": {
+              "ja": "車載電池の電池残容量1、車載電池の電池残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+              "en": "The installation of \"Remaining stored electricity of vehicle mounted battery 1\" or \"Remaining stored electricity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
+            }
+          },
+          "0xE6": {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "車両ID",
+              "en": "Vehcle ID"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "object",
+              "properties": [
+                {
+                  "name": "dataSize",
+                  "element": {
+                    "$ref": "#/definitions/number_0-24"
+                  }
+                },
+                {
+                  "name": "id",
+                  "element": {
+                    "type": "raw",
+                    "minSize": 0,
+                    "maxSize": 24
+                  }
+                }
+              ]
+            }
+          },
+          "0xE7": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "充電量設定値1",
+              "en": "Charging amount setting 1"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_0-999999999",
+                  "unit": "Wh"
+                },
+                {
+                  "$ref": "#/definitions/state_NotSet_00000000"
+                }
+              ]
+            },
+            "note": {
+              "ja": "充電量設定値1（または2）を使用する場合は充電量設定値2（または1）を使用しない。",
+              "en": "When \"Charging amount setting 1 (or 2)\" is used, \"Charging amount setting 2 (or 1)\" shall not be used."
+            }
+          },
+          "0xE9": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "充電量設定値2",
+              "en": "Charging amount setting 2"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_0-32766",
+                  "unit": "Ah",
+                  "multipleOf": 0.1
+                },
+                {
+                  "$ref": "#/definitions/state_NotSet_00000000"
+                }
+              ]
+            },
+            "note": {
+              "ja": "充電量設定値1（または2）を使用する場合は充電量設定値2（または1）を使用しない。",
+              "en": "When \"Charging amount setting 1 (or 2)\" is used, \"Charging amount setting 2 (or 1)\" shall not be used."
+            }
+          },
+          "0xEA": {
+            "validRelease": {
+              "from": "J",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "放電量設定値",
+              "en": "Discharging electric energy setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_0-999999999",
+                  "unit": "Wh"
+                },
+                {
+                  "$ref": "#/definitions/state_NotSet_00000000"
+                }
+              ]
+            }
+          },
+          "0xEB": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "充電電力設定値",
+              "en": "Charging electric energy setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "W"
+            }
+          },
+          "0xEC": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "放電電力設定値",
+              "en": "Discharging electric energy setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-999999999",
+              "unit": "W"
+            }
+          },
+          "0xED": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "充電電流設定値",
+              "en": "Charging current setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-65533",
+              "unit": "A",
+              "multipleOf": 0.1
+            }
+          },
+          "0xEE": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "放電電流設定値",
+              "en": "Discharging current setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-65533",
+              "unit": "A",
+              "multipleOf": 0.1
+            }
+          },
+          "0xEF": {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "定格電圧（独立時）",
+              "en": "Rated voltage(Independent)"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-32766",
+              "unit": "V"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

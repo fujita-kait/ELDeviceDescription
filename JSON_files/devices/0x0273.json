@@ -1,0 +1,732 @@
+{
+  "0x0273": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "浴室暖房乾燥機",
+      "en": "Bathroom heater and dryer"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定１",
+          "en": "\"ON timer-based reservation\" setting 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ相対時間設定値",
+          "en": "ON timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x94": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ予約設定",
+          "en": "\"OFF timer-based reservation\" setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x95": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ時刻設定値",
+          "en": "OFF timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x96": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ相対時間設定値",
+          "en": "OFF timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB0": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "K"
+            },
+            "propertyName": {
+              "ja": "運転設定",
+              "en": "Operation setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x10",
+                  "state": {
+                    "ja": "換気運転",
+                    "en": "Ventilation"
+                  }
+                },
+                {
+                  "edt": "0x20",
+                  "state": {
+                    "ja": "入浴前予備暖房運転",
+                    "en": "Preheating"
+                  }
+                },
+                {
+                  "edt": "0x30",
+                  "state": {
+                    "ja": "入浴中暖房運転",
+                    "en": "Heating"
+                  }
+                },
+                {
+                  "edt": "0x40",
+                  "state": {
+                    "ja": "乾燥運転",
+                    "en": "Drying"
+                  }
+                },
+                {
+                  "edt": "0x50",
+                  "state": {
+                    "ja": "涼風運転",
+                    "en": "Cooling"
+                  }
+                },
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "停止",
+                    "en": "stop"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "L",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "運転設定",
+              "en": "Operation setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x10",
+                  "state": {
+                    "ja": "換気運転",
+                    "en": "Ventilation"
+                  }
+                },
+                {
+                  "edt": "0x20",
+                  "state": {
+                    "ja": "入浴前予備暖房運転",
+                    "en": "Preheating"
+                  }
+                },
+                {
+                  "edt": "0x30",
+                  "state": {
+                    "ja": "入浴中暖房運転",
+                    "en": "Heating"
+                  }
+                },
+                {
+                  "edt": "0x40",
+                  "state": {
+                    "ja": "乾燥運転",
+                    "en": "Drying"
+                  }
+                },
+                {
+                  "edt": "0x50",
+                  "state": {
+                    "ja": "涼風運転",
+                    "en": "Cooling"
+                  }
+                },
+                {
+                  "edt": "0x60",
+                  "state": {
+                    "ja": "ミストサウナ運転",
+                    "en": "Mist sauna"
+                  }
+                },
+                {
+                  "edt": "0x61",
+                  "state": {
+                    "ja": "水ミスト運転",
+                    "en": "Water mist"
+                  }
+                },
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "停止",
+                    "en": "stop"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気運転設定",
+          "en": "Ventilation operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "G"
+            },
+            "propertyName": {
+              "ja": "入浴前予備暖房運転設定",
+              "en": "Bathroom pre-warmer_operation setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/level_31-8"
+                },
+                {
+                  "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "H",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "入浴前予備暖房運転設定",
+              "en": "Bathroom pre-warmer_operation setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/level_31-8"
+                },
+                {
+                  "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "入浴中暖房運転設定",
+          "en": "Bathroom heater operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+            }
+          ]
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥運転設定",
+          "en": "Bathroom dryer operation setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+            }
+          ]
+        }
+      },
+      "0xB5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "涼風運転設定",
+          "en": "Cool air circulator operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+            }
+          ]
+        }
+      },
+      "0xB6": {
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ミストサウナ運転設定",
+          "en": "Mist sauna operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+            }
+          ]
+        }
+      },
+      "0xB7": {
+        "validRelease": {
+          "from": "L",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "水ミスト運転設定",
+          "en": "Water mist operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-STANDARD-4142"
+            }
+          ]
+        }
+      },
+      "0xBA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内相対湿度計測値",
+          "en": "Measured relative bathroom humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xBB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内温度計測値",
+          "en": "Measured bathroom temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気風量設定",
+          "en": "Ventilation air flow rate setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        }
+      },
+      "0xCF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "フィルタサイン設定",
+          "en": "Filter cleaning reminder sign setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "点灯",
+                "en": "Lit"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "消灯",
+                "en": "Not Lit"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "人体検知状態",
+          "en": "Human body detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE1": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "K"
+            },
+            "propertyName": {
+              "ja": "ONタイマ予約設定２",
+              "en": "\"ON timer-based reservation\" setting 2"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x10",
+                  "state": {
+                    "ja": "換気運転予約",
+                    "en": "Reservation function ON for the ventilation mode"
+                  }
+                },
+                {
+                  "edt": "0x20",
+                  "state": {
+                    "ja": "入浴前予備暖房運転予約",
+                    "en": "Reservation function ON for the bathroom prewarmer mode"
+                  }
+                },
+                {
+                  "edt": "0x30",
+                  "state": {
+                    "ja": "入浴中暖房運転予約",
+                    "en": "Reservation function ON for the bathroom heater mode"
+                  }
+                },
+                {
+                  "edt": "0x40",
+                  "state": {
+                    "ja": "乾燥運転予約",
+                    "en": "Reservation function ON for the bathroom dryer mode"
+                  }
+                },
+                {
+                  "edt": "0x50",
+                  "state": {
+                    "ja": "涼風運転予約",
+                    "en": "Reservation function ON for the cool air circulator mode"
+                  }
+                },
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "予約切",
+                    "en": "OFF"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "L",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "ONタイマ予約設定2",
+              "en": "\"ON timer-based reservation\" setting 2"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x10",
+                  "state": {
+                    "ja": "換気運転予約",
+                    "en": "Reservation function ON for the ventilation mode"
+                  }
+                },
+                {
+                  "edt": "0x20",
+                  "state": {
+                    "ja": "入浴前予備暖房運転予約",
+                    "en": "Reservation function ON for the bathroom prewarmer mode"
+                  }
+                },
+                {
+                  "edt": "0x30",
+                  "state": {
+                    "ja": "入浴中暖房運転予約",
+                    "en": "Reservation function ON for the bathroom heater mode"
+                  }
+                },
+                {
+                  "edt": "0x40",
+                  "state": {
+                    "ja": "乾燥運転予約",
+                    "en": "Reservation function ON for the bathroom dryer mode"
+                  }
+                },
+                {
+                  "edt": "0x50",
+                  "state": {
+                    "ja": "涼風運転予約",
+                    "en": "Reservation function ON for the cool air circulator mode"
+                  }
+                },
+                {
+                  "edt": "0x60",
+                  "state": {
+                    "ja": "ミストサウナ運転予約",
+                    "en": "Mist sauna operation reservation"
+                  }
+                },
+                {
+                  "edt": "0x61",
+                  "state": {
+                    "ja": "水ミスト運転予約",
+                    "en": "Water mist operation reservation"
+                  }
+                },
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "予約切",
+                    "en": "Reservation function OFF"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

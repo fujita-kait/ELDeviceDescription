@@ -1,0 +1,12 @@
+{
+  "metaData": {
+    "date": "2021-02-10",
+    "release": "N",
+    "version": "3.2.1rc3",
+    "note": {
+      "ja": "Release N 対応",
+      "en": "Support Release N"
+    },
+    "Copyright": "(C) 2021 Kanagawa Institute of Technology"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "0x0022": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電力量センサ",
+      "en": "Electric energy sensor"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算電力量計測値",
+          "en": "Cumulative amounts of electric energy"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "kWh",
+          "multipleOf": 0.001
+        },
+        "note": {
+          "ja": "オーバーフロー時は0にリセット",
+          "en": "The value is reset to 0 after overflow"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "B",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "中容量センサ瞬時電力値計測値",
+          "en": "Medium-capacity sensor instantaneous electric energy"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-999999999-999999999",
+          "unit": "W"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "小容量センサ瞬時電力値計測値",
+          "en": "Small-capacity sensor instantaneous electric energy"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-32767-32766",
+          "unit": "W",
+          "multipleOf": 0.1
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "大容量センサ瞬時電力値計測値",
+          "en": "Large-capacity sensor instantaneous electric energy"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-32767-32766",
+          "unit": "kW",
+          "multipleOf": 0.1
+        }
+      },
+      "0xE4": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "K"
+            },
+            "propertyName": {
+              "ja": "積算電力量計測履歴情報",
+              "en": "Cumulative amounts of electric energy measurement log"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "array",
+              "itemSize": 4,
+              "minItems": 48,
+              "maxItems": 48,
+              "items": {
+                "$ref": "#/definitions/number_0-999999999",
+                "unit": "kWh",
+                "multipleOf": 0.001
+              }
+            }
+          },
+          {
+            "validRelease": {
+              "from": "L",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "積算電力量計測履歴情報",
+              "en": "Cumulative amounts of electric energy measurement log"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "array",
+              "itemSize": 4,
+              "minItems": 48,
+              "maxItems": 48,
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-999999999",
+                    "unit": "kWh",
+                    "multipleOf": 0.001
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "実効電圧値計測値",
+          "en": "Effective voltage value"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "V"
+        }
+      }
+    }
+  }
+}

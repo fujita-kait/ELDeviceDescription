@@ -1,0 +1,68 @@
+{
+  "0x0001": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ガス漏れセンサ",
+      "en": "Gas leak sensor"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検知閾値レベル設定",
+          "en": "Detection threshold level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ガス漏れ発生状態",
+          "en": "Gas leak occurrence status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ガス漏れ発生状態リセット設定",
+          "en": "Gas leak occurrence status resetting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/state_RESET"
+        }
+      }
+    }
+  }
+}

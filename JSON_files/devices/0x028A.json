@@ -1,0 +1,1045 @@
+{
+  "0x028A": {
+    "validRelease": {
+      "from": "F",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "高圧スマート電力量メータ",
+      "en": "High-voltage smart electric energy meter"
+    },
+    "elProperties": {
+      "0xC1": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "月間最大需要電力",
+          "en": "Monthly maximum electric power demand"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-99999999",
+              "unit": "kW"
+            },
+            {
+              "type": "state",
+              "size": 4,
+              "enum": [
+                {
+                  "edt": "0xFFFFFFFE",
+                  "state": {
+                    "ja": "No data",
+                    "en": "No data"
+                  },
+                  "readOnly": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "累積最大需要電力",
+          "en": "Cumulative maximum electric power demand"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99999999",
+          "unit": "kW"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定時需要電力（30分平均電力）",
+          "en": "Electric power demand at fixed time(30-minute average electric power)"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "dateAndTime",
+              "element": {
+                "type": "date-time"
+              }
+            },
+            {
+              "name": "energy",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99999999",
+                    "unit": "kW"
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        },
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "需要電力有効桁数",
+          "en": "Number of effective digits of electric power demand"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-8",
+          "unit": "digit"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "需要電力単位",
+          "en": "Unit of electric power demand"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            },
+            {
+              "edt": "0x04",
+              "numericValue": 0.0001
+            },
+            {
+              "edt": "0x0A",
+              "numericValue": 10
+            },
+            {
+              "edt": "0x0B",
+              "numericValue": 100
+            },
+            {
+              "edt": "0x0C",
+              "numericValue": 1000
+            },
+            {
+              "edt": "0x0D",
+              "numericValue": 10000
+            }
+          ]
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "需要電力計測値履歴",
+          "en": "Historical data of measured electric power demand"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "atomic": "0xE1",
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "day",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99_u16"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0x00FF",
+                        "state": {
+                          "ja": "初期値",
+                          "en": "Default value"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "power",
+              "element": {
+                "type": "array",
+                "itemSize": 4,
+                "minItems": 48,
+                "maxItems": 48,
+                "items": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/number_0-99999999",
+                      "unit": "kW"
+                    },
+                    {
+                      "type": "state",
+                      "size": 4,
+                      "enum": [
+                        {
+                          "edt": "0xFFFFFFFE",
+                          "state": {
+                            "ja": "No data",
+                            "en": "No data"
+                          },
+                          "readOnly": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "Atomic operation with EPC=0xE1",
+          "en": "Atomic operation with EPC=0xE1"
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "累積最大需要電力単位",
+          "en": "Unit of cumulative maximum electric power demand"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            },
+            {
+              "edt": "0x04",
+              "numericValue": 0.0001
+            },
+            {
+              "edt": "0x0A",
+              "numericValue": 10
+            },
+            {
+              "edt": "0x0B",
+              "numericValue": 100
+            },
+            {
+              "edt": "0x0C",
+              "numericValue": 1000
+            },
+            {
+              "edt": "0x0D",
+              "numericValue": 10000
+            }
+          ]
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "力測積算無効電力量（遅れ）計測値",
+          "en": "Measurement data of reactive electric power consumption(lag) for power factor measurement"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "dateAndTime",
+              "element": {
+                "type": "date-time"
+              }
+            },
+            {
+              "name": "powerConsumption",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99999999",
+                    "unit": "kvarh",
+                    "coefficient": [
+                      "0xCD",
+                      "0xD3",
+                      "0xD4"
+                    ]
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        },
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xCB": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定時力測積算無効電力量（遅れ）計測値",
+          "en": "Measurement data of cumulative amount of reactive electric power consumption(lag) at fixed time for power factor measurement"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "dateAndTime",
+              "element": {
+                "type": "date-time"
+              }
+            },
+            {
+              "name": "powerConsumption",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99999999",
+                    "unit": "kvarh",
+                    "coefficient": [
+                      "0xCD",
+                      "0xD3",
+                      "0xD4"
+                    ]
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        },
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xCC": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "力測積算無効電力量（遅れ）有効桁数",
+          "en": "Number of effective digits for measurement data of cumulative amount of reactive electric power consumption(lag) for power factor measurement"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-8",
+          "unit": "digit"
+        }
+      },
+      "0xCD": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "力測積算無効電力量（遅れ）単位",
+          "en": "Unit of measurement data of cumulative amount of reactive electric power consumption(lag)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            },
+            {
+              "edt": "0x04",
+              "numericValue": 0.0001
+            },
+            {
+              "edt": "0x0A",
+              "numericValue": 10
+            },
+            {
+              "edt": "0x0B",
+              "numericValue": 100
+            },
+            {
+              "edt": "0x0C",
+              "numericValue": 1000
+            },
+            {
+              "edt": "0x0D",
+              "numericValue": 10000
+            }
+          ]
+        }
+      },
+      "0xCE": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "力測積算無効電力量（遅れ）計測値履歴",
+          "en": "Historical data of measurement data of cumulative amount of reactive electric power consumption(lag) for power factor measurement"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "atomic": "0xE1",
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "day",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99_u16"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0x00FF",
+                        "state": {
+                          "ja": "初期値",
+                          "en": "Default value"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "powerConsumption",
+              "element": {
+                "type": "array",
+                "itemSize": 4,
+                "minItems": 48,
+                "maxItems": 48,
+                "items": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/number_0-99999999",
+                      "unit": "kvarh",
+                      "coefficient": [
+                        "0xCD",
+                        "0xD3",
+                        "0xD4"
+                      ]
+                    },
+                    {
+                      "type": "state",
+                      "size": 4,
+                      "enum": [
+                        {
+                          "edt": "0xFFFFFFFE",
+                          "state": {
+                            "ja": "No data",
+                            "en": "No data"
+                          },
+                          "readOnly": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "Atomic operation with EPC=0xE1",
+          "en": "Atomic operation with EPC=0xE1"
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "係数",
+          "en": "Coefficient"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "係数の倍率",
+          "en": "Multiplying factor for coefficient"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "確定日",
+          "en": "Fixed date"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-31"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算履歴収集日",
+          "en": "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-99"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFF",
+                  "state": {
+                    "ja": "初期値",
+                    "en": "Default value"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "note": {
+          "ja": "0:当日",
+          "en": "0:current day"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算有効電力量計測値",
+          "en": "Measured cumulative amount of active electric energy"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "dateAndTime",
+              "element": {
+                "type": "date-time"
+              }
+            },
+            {
+              "name": "energy",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99999999",
+                    "unit": "kWh",
+                    "coefficient": [
+                      "0xD3",
+                      "0xD4",
+                      "0xE6"
+                    ]
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        },
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定時積算有効電力量計測値",
+          "en": "Cumulative amounts of active electric energy at fixed time"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "dateAndTime",
+              "element": {
+                "type": "date-time"
+              }
+            },
+            {
+              "name": "energy",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99999999",
+                    "unit": "kWh",
+                    "coefficient": [
+                      "0xD3",
+                      "0xD4",
+                      "0xE6"
+                    ]
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        },
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "力測積算有効電力量計測値",
+          "en": "Measurement data of cumulative amount of active electric energy for power factor measurement"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "dateAndTime",
+              "element": {
+                "type": "date-time"
+              }
+            },
+            {
+              "name": "energy",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99999999",
+                    "unit": "kWh",
+                    "coefficient": [
+                      "0xD3",
+                      "0xD4",
+                      "0xE6"
+                    ]
+                  },
+                  {
+                    "type": "state",
+                    "size": 4,
+                    "enum": [
+                      {
+                        "edt": "0xFFFFFFFE",
+                        "state": {
+                          "ja": "No data",
+                          "en": "No data"
+                        },
+                        "readOnly": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算有効電力量有効桁数",
+          "en": "Number of effective digits for cumulative amount of active electric energy"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-8",
+          "unit": "digit"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算有効電力量単位",
+          "en": "Unit of cumulative amounts of effective electric energy"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "numericValue",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x00",
+              "numericValue": 1
+            },
+            {
+              "edt": "0x01",
+              "numericValue": 0.1
+            },
+            {
+              "edt": "0x02",
+              "numericValue": 0.01
+            },
+            {
+              "edt": "0x03",
+              "numericValue": 0.001
+            },
+            {
+              "edt": "0x04",
+              "numericValue": 0.0001
+            },
+            {
+              "edt": "0x0A",
+              "numericValue": 10
+            },
+            {
+              "edt": "0x0B",
+              "numericValue": 100
+            },
+            {
+              "edt": "0x0C",
+              "numericValue": 1000
+            },
+            {
+              "edt": "0x0D",
+              "numericValue": 10000
+            }
+          ]
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算有効電力量計測値履歴",
+          "en": "Historical data of measured cumulative amount of active electric energy"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "atomic": "0xE1",
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "day",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-99_u16"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0x00FF",
+                        "state": {
+                          "ja": "初期値",
+                          "en": "Default value"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "energy",
+              "element": {
+                "type": "array",
+                "itemSize": 4,
+                "minItems": 48,
+                "maxItems": 48,
+                "items": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/number_0-99999999",
+                      "unit": "kWh",
+                      "coefficient": [
+                        "0xD3",
+                        "0xD4",
+                        "0xE6"
+                      ]
+                    },
+                    {
+                      "type": "state",
+                      "size": 4,
+                      "enum": [
+                        {
+                          "edt": "0xFFFFFFFE",
+                          "state": {
+                            "ja": "No data",
+                            "en": "No data"
+                          },
+                          "readOnly": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "note": {
+          "ja": "Atomic operation with EPC=0xE1",
+          "en": "Atomic operation with EPC=0xE1"
+        }
+      }
+    }
+  }
+}

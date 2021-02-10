@@ -1,0 +1,387 @@
+{
+  "0x05FB": {
+    "validRelease": {
+      "from": "G",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "DRイベントコントローラ",
+      "en": "DR event controller"
+    },
+    "elProperties": {
+      "0xD0": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "事業者ID",
+          "en": "Business ID"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-65533"
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "DR プログラムタイプ",
+          "en": "DR program type"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "CPP",
+                "en": "CPP"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "PTR",
+                "en": "PTR"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "電力使用制限",
+                "en": "Power use limit"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "発電電力制限",
+                "en": "Power generation limit"
+              }
+            },
+            {
+              "edt": "0x34",
+              "state": {
+                "ja": "でんき予報",
+                "en": "Electricity forecast"
+              }
+            },
+            {
+              "edt": "0x35",
+              "state": {
+                "ja": "DLC",
+                "en": "DLC"
+              }
+            },
+            {
+              "edt": "0x36",
+              "state": {
+                "ja": "レベル指定",
+                "en": "Level designation"
+              }
+            }
+          ]
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "プログラムID",
+          "en": "Program ID"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_1-253"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFE",
+                  "state": {
+                    "ja": "未設定",
+                    "en": "Undefined"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "現在有効イベント情報",
+          "en": "Current valid event information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-165"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "次有効イベント情報",
+          "en": "Next valid event information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-165"
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "将来イベント情報通知IDリスト",
+          "en": "Future event information notification ID list"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-101"
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "過去イベント情報通知IDリスト",
+          "en": "Past event information notification ID list"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-101"
+        }
+      },
+      "0xD7": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "最新受信イベント通知ID",
+          "en": "Newest received event notification ID"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-99"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFE",
+                  "state": {
+                    "ja": "無し",
+                    "en": "None"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xD8": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "最過去受信イベント通知ID",
+          "en": "Oldest received event notification ID"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-99"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFE",
+                  "state": {
+                    "ja": "無し",
+                    "en": "None"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xD9": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "通知ID 指定",
+          "en": "Notification ID designation"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99"
+        }
+      },
+      "0xDA": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "イベント情報ID指定",
+          "en": "Event information ID designation"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_10"
+        }
+      },
+      "0xDB": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "対象機器情報リスト",
+          "en": "Target device information list"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-231"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "イベント情報",
+          "en": "Event information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1-165"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "確認・OPT 情報",
+          "en": "Confirm/opt information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_14"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "確認・OPT 情報ステータス",
+          "en": "Confirm/opt information status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      }
+    }
+  }
+}

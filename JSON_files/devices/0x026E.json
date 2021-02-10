@@ -1,0 +1,341 @@
+{
+  "0x026E": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電気便座",
+      "en": "Electric toilet seat"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "便座温度レベル設定",
+          "en": "Temperature level of toilet seat"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-10"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "便座ヒータ設定",
+          "en": "Heater setting of toilet seat"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "便座ヒータ一時停止設定",
+          "en": "Temporal halt setting of toilet seat"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "連続",
+                "en": "Continuous"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "一回",
+                "en": "Once"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "設定無し",
+                "en": "No setting"
+              }
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "便座ヒータ一時停止開始時刻設定値",
+          "en": "Temporal halt start time of toilet seat"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "便座ヒータ一時停止時間設定値",
+          "en": "Temporal halt time duration of toilet seat"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "部屋暖房温度レベル設定",
+          "en": "Temperature level setting of room heating"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "低",
+                "en": "Low"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "中",
+                "en": "Medium"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "高",
+                "en": "High"
+              }
+            }
+          ]
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "部屋暖房設定",
+          "en": "Room heating setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "ON",
+                "en": "ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "OFF",
+                "en": "OFF"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "Timer mode",
+                "en": "Timer mode"
+              }
+            }
+          ]
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "部屋暖房状態",
+          "en": "Room heating status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "部屋暖房開始時刻設定値",
+          "en": "Start time of room heating"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "部屋暖房運転時間設定値",
+          "en": "Duration time of room heating"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "特別運転モード設定",
+          "en": "Special operation mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "設定無し",
+                "en": "No setting"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "冷え込み防止",
+                "en": "Over-cool prevention"
+              }
+            }
+          ]
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "人体検知状態",
+          "en": "Human detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "着座検知状態",
+          "en": "Seating detection status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      }
+    }
+  }
+}

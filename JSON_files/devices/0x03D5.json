@@ -1,0 +1,1390 @@
+{
+  "0x03D5": {
+    "validRelease": {
+      "from": "M",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "食器洗い乾燥機",
+      "en": "Dishwasher and dryer"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ相対時間設定値",
+          "en": "ON timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2,
+          "maximumOfHour": 255
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "扉・蓋開閉設定",
+          "en": "Door/cover open/close setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "扉・蓋ロック設定",
+          "en": "Door/cover lock setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOCK-UNLOCK-4142"
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転状態設定",
+          "en": "Operation status setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "運転開始・再開/運転中",
+                "en": "Start/restart(ed) or in progress"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "運転一時停止",
+                "en": "Operation suspended"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "運転停止",
+                "en": "Operation stopped"
+              }
+            }
+          ]
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗浄方法設定",
+          "en": "Dish-washing method setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "洗浄運転切",
+                "en": "Dish-washing operation OFF"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "標準",
+                "en": "Standard"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "静音",
+                "en": "Silent"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "汚れ大",
+                "en": "Heavily stained"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "しつこい汚れ",
+                "en": "Hard-to-remove stains"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "ソフト",
+                "en": "Soft"
+              }
+            },
+            {
+              "edt": "0x46",
+              "state": {
+                "ja": "汚れ少",
+                "en": "Lightly stained"
+              }
+            },
+            {
+              "edt": "0x47",
+              "state": {
+                "ja": "少量短時間",
+                "en": "Quick wash of small amount of laundry"
+              }
+            },
+            {
+              "edt": "0x48",
+              "state": {
+                "ja": "すすぎのみ",
+                "en": "Rinsing only"
+              }
+            },
+            {
+              "edt": "0x49",
+              "state": {
+                "ja": "除菌",
+                "en": "Disinfection"
+              }
+            },
+            {
+              "edt": "0x4F",
+              "state": {
+                "ja": "お手入れ",
+                "en": "Maintenance"
+              }
+            }
+          ]
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥方法設定",
+          "en": "Drying cycle setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x80",
+              "state": {
+                "ja": "乾燥運転切",
+                "en": "Drying operation OFF"
+              }
+            },
+            {
+              "edt": "0x81",
+              "state": {
+                "ja": "最弱",
+                "en": "Very low"
+              }
+            },
+            {
+              "edt": "0x82",
+              "state": {
+                "ja": "弱",
+                "en": "Low"
+              }
+            },
+            {
+              "edt": "0x83",
+              "state": {
+                "ja": "標準",
+                "en": "Standard"
+              }
+            },
+            {
+              "edt": "0x84",
+              "state": {
+                "ja": "ソフト",
+                "en": "Soft"
+              }
+            },
+            {
+              "edt": "0x85",
+              "state": {
+                "ja": "強",
+                "en": "High"
+              }
+            },
+            {
+              "edt": "0x86",
+              "state": {
+                "ja": "最強",
+                "en": "Very high"
+              }
+            },
+            {
+              "edt": "0x87",
+              "state": {
+                "ja": "時間指定",
+                "en": "User definition of drying time"
+              }
+            },
+            {
+              "edt": "0x88",
+              "state": {
+                "ja": "乾燥のみ",
+                "en": "Drying only"
+              }
+            },
+            {
+              "edt": "0x8F",
+              "state": {
+                "ja": "庫内乾燥",
+                "en": "Drying inside"
+              }
+            }
+          ]
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "保管方法設定",
+          "en": "Storing method setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0xC0",
+              "state": {
+                "ja": "保管運転切",
+                "en": "Storing operation OFF"
+              }
+            },
+            {
+              "edt": "0xC1",
+              "state": {
+                "ja": "送風",
+                "en": "Blowing"
+              }
+            },
+            {
+              "edt": "0xC2",
+              "state": {
+                "ja": "除湿",
+                "en": "Dehumidification"
+              }
+            },
+            {
+              "edt": "0xC3",
+              "state": {
+                "ja": "除菌",
+                "en": "Disinfection"
+              }
+            }
+          ]
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗浄方法設定可能情報",
+          "en": "Dish-washing method setting acceptable information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥方法設定可能情報",
+          "en": "Drying cycle setting acceptable information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "保管方法設定可能情報",
+          "en": "Storing method setting acceptable information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "予洗い時間設定値",
+          "en": "Prewashing time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FFFF"
+            },
+            {
+              "$ref": "#/definitions/level_A001-8"
+            },
+            {
+              "$ref": "#/definitions/level_C001-8"
+            }
+          ]
+        }
+      },
+      "0xD7": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "予洗い最高水温設定値",
+          "en": "Highest water temperature setting for prewashing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-100Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_NoHotWater-FE"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xD8": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "本洗い時間設定値",
+          "en": "Washing time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FFFF"
+            },
+            {
+              "$ref": "#/definitions/level_A001-8"
+            },
+            {
+              "$ref": "#/definitions/level_C001-8"
+            }
+          ]
+        }
+      },
+      "0xD9": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "本洗い最高水温設定値",
+          "en": "Highest water temperature setting for washing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-100Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_NoHotWater-FE"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xDA": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "すすぎ回数設定値",
+          "en": "Number of times of rinsing setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            }
+          ]
+        }
+      },
+      "0xDB": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "すすぎモード設定",
+          "en": "Rinsing mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_4"
+        }
+      },
+      "0xDC": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "熱水すすぎ最高水温設定値",
+          "en": "Highest water temperature setting for hot water rinsing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-100Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_NoHotWater-FE"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xDD": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗浄水量設定",
+          "en": "Dish-washing water volume setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-16"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xDE": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗浄水圧設定",
+          "en": "Dish-washing water pressure setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-16"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xDF": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗浄度設定",
+          "en": "Dish-washing level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-16"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥時間設定値",
+          "en": "Drying time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FFFF"
+            },
+            {
+              "$ref": "#/definitions/level_A001-8"
+            },
+            {
+              "$ref": "#/definitions/level_C001-8"
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "熱風乾燥最高気温設定値",
+          "en": "Highest air temperature setting for hot air drying"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-150Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_NoHotWater-FE"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥風量設定",
+          "en": "Drying air flow rate setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-16"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥度設定",
+          "en": "Drying level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-16"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-FF"
+            },
+            {
+              "$ref": "#/definitions/level_A1-8"
+            },
+            {
+              "$ref": "#/definitions/level_C1-8"
+            }
+          ]
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "保管時間設定値",
+          "en": "Storing time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転設定情報",
+          "en": "Operation setting information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_27"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転遷移状態",
+          "en": "Operation transition status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x10",
+              "state": {
+                "ja": "運転開始前",
+                "en": "Before starting operation"
+              }
+            },
+            {
+              "edt": "0x11",
+              "state": {
+                "ja": "運転前",
+                "en": "Before operation"
+              }
+            },
+            {
+              "edt": "0x14",
+              "state": {
+                "ja": "ON タイマ待機中",
+                "en": "ON timer standing by"
+              }
+            },
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "洗浄中",
+                "en": "Dish-washing ongoing"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "予洗い中",
+                "en": "Prewashing ongoing"
+              }
+            },
+            {
+              "edt": "0x34",
+              "state": {
+                "ja": "本洗い中",
+                "en": "Washing ongoing"
+              }
+            },
+            {
+              "edt": "0x37",
+              "state": {
+                "ja": "すすぎ中",
+                "en": "Rinsing ongoing"
+              }
+            },
+            {
+              "edt": "0x3F",
+              "state": {
+                "ja": "洗浄一時停止",
+                "en": "Dish-washing suspended"
+              }
+            },
+            {
+              "edt": "0x50",
+              "state": {
+                "ja": "乾燥中",
+                "en": "Drying ongoing"
+              }
+            },
+            {
+              "edt": "0x51",
+              "state": {
+                "ja": "熱風乾燥中",
+                "en": "Hot air drying ongoing"
+              }
+            },
+            {
+              "edt": "0x54",
+              "state": {
+                "ja": "風乾燥中",
+                "en": "Air drying ongoing"
+              }
+            },
+            {
+              "edt": "0x5F",
+              "state": {
+                "ja": "乾燥一時停止",
+                "en": "Drying suspended"
+              }
+            },
+            {
+              "edt": "0x70",
+              "state": {
+                "ja": "保管中",
+                "en": "Storing ongoing"
+              }
+            },
+            {
+              "edt": "0x71",
+              "state": {
+                "ja": "送風中",
+                "en": "Blowing ongoing"
+              }
+            },
+            {
+              "edt": "0x74",
+              "state": {
+                "ja": "除湿中",
+                "en": "Dehumidification ongoing"
+              }
+            },
+            {
+              "edt": "0x77",
+              "state": {
+                "ja": "除菌中",
+                "en": "Disinfection ongoing"
+              }
+            },
+            {
+              "edt": "0x7F",
+              "state": {
+                "ja": "保管一時停止",
+                "en": "Storing suspended"
+              }
+            },
+            {
+              "edt": "0x90",
+              "state": {
+                "ja": "運転完了",
+                "en": "Operation completed"
+              }
+            },
+            {
+              "edt": "0xB1",
+              "state": {
+                "ja": "第１すすぎ",
+                "en": "1st rinsing"
+              }
+            },
+            {
+              "edt": "0xB2",
+              "state": {
+                "ja": "第２すすぎ",
+                "en": "2nd rinsing"
+              }
+            },
+            {
+              "edt": "0xB3",
+              "state": {
+                "ja": "第３すすぎ",
+                "en": "3rd rinsing"
+              }
+            },
+            {
+              "edt": "0xB4",
+              "state": {
+                "ja": "第４すすぎ",
+                "en": "4th rinsing"
+              }
+            },
+            {
+              "edt": "0xB5",
+              "state": {
+                "ja": "第５すすぎ",
+                "en": "5th rinsing"
+              }
+            },
+            {
+              "edt": "0xB6",
+              "state": {
+                "ja": "第６すすぎ",
+                "en": "6th rinsing"
+              }
+            },
+            {
+              "edt": "0xB7",
+              "state": {
+                "ja": "第７すすぎ",
+                "en": "7th rinsing"
+              }
+            },
+            {
+              "edt": "0xB8",
+              "state": {
+                "ja": "第８すすぎ",
+                "en": "8th rinsing"
+              }
+            },
+            {
+              "edt": "0xFF",
+              "state": {
+                "ja": "状態不明",
+                "en": "Unknown status"
+              }
+            }
+          ]
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ON タイマ残り時間",
+          "en": "Remaining time on the ON timer"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "予洗い残り時間",
+          "en": "Remaining time of prewashing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "本洗い残り時間",
+          "en": "Remaining time of washing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "すすぎ残り時間",
+          "en": "Remaining time for rinsing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗浄残り時間",
+          "en": "Remaining time of dish-washing"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "乾燥残り時間",
+          "en": "Remaining drying time"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗乾残り時間",
+          "en": "Remaining time of washing and drying"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "time",
+              "size": 2,
+              "maximumOfHour": 254
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "保管経過時間",
+          "en": "Storing elapsed time"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": [
+                {
+                  "name": "day",
+                  "element": {
+                    "$ref": "#/definitions/number_0-254"
+                  }
+                },
+                {
+                  "name": "hourAndMinute",
+                  "element": {
+                    "type": "time",
+                    "size": 2
+                  }
+                }
+              ]
+            },
+            {
+              "type": "state",
+              "size": 3,
+              "enum": [
+                {
+                  "edt": "0xFFFFFF",
+                  "state": {
+                    "ja": "残り時間不明",
+                    "en": "Remaining time unknown"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xEF": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "使用水量",
+          "en": "Used water volume"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-65534",
+              "unit": "L",
+              "multipleOf": 0.01
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FFFF"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

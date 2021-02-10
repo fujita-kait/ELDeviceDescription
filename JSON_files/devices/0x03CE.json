@@ -1,0 +1,672 @@
+{
+  "0x03CE": {
+    "validRelease": {
+      "from": "F",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "業務用ショーケース",
+      "en": "Commercial show case"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転モード設定",
+          "en": "Operation mode setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "冷却",
+                "en": "Cooling"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "非冷",
+                "en": "Non-cooling"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "霜取り",
+                "en": "Defrosting"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xBD": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "吐出温度計測値",
+          "en": "Measured value of discharge temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xCA": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "F",
+              "to": "H"
+            },
+            "propertyName": {
+              "ja": "グループ情報",
+              "en": "Group information"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/raw_1"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "I",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "グループ情報",
+              "en": "Group information"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_1-253"
+                },
+                {
+                  "$ref": "#/definitions/state_NoSetting"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ショーケースタイプ情報",
+          "en": "Showcase type information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "ノンフロンインバータ（CO2）",
+                "en": "Non-fluorocarbon inverter"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "インバータ",
+                "en": "Inverter"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ドアタイプ情報",
+          "en": "Door type information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "オープンタイプ",
+                "en": "Open type"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "クローズドタイプ",
+                "en": "Closed type"
+              }
+            }
+          ]
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ショーケース構成情報",
+          "en": "Showcase configuration information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "別置型",
+                "en": "Separate type"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "内蔵型",
+                "en": "Built-in type"
+              }
+            }
+          ]
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ショーケース形状情報",
+          "en": "Showcase shape information"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "箱型",
+                "en": "Box type"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "卓上型",
+                "en": "Desktop type"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "三面ガラス式",
+                "en": "Triple glass type"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "四面ガラス式",
+                "en": "Quadruple glass type"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "リーチイン",
+                "en": "Reach-in"
+              }
+            },
+            {
+              "edt": "0x46",
+              "state": {
+                "ja": "ガラストップ",
+                "en": "Glass top type"
+              }
+            },
+            {
+              "edt": "0x47",
+              "state": {
+                "ja": "多段型オープン（天井吹出形）",
+                "en": "Multistage open (ceiling blowoff type)"
+              }
+            },
+            {
+              "edt": "0x48",
+              "state": {
+                "ja": "多段型オープン（背面吹出形）",
+                "en": "ultistageopen (backside blowoff type)"
+              }
+            },
+            {
+              "edt": "0x49",
+              "state": {
+                "ja": "平型",
+                "en": "Flat type"
+              }
+            },
+            {
+              "edt": "0x4A",
+              "state": {
+                "ja": "ウォークイン",
+                "en": "Walk-in type"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内温度帯情報",
+          "en": "Temperature range information for inside the case"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "冷蔵",
+                "en": "Refrigeration"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "冷凍",
+                "en": "Freezing"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内照明動作状態",
+          "en": "Internal lighting operation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫外照明動作状態",
+          "en": "External lighting operation status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "コンプレッサ動作状態",
+          "en": "Compressor operation status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内温度計測値",
+          "en": "Measured value of internal temperature"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-125Celsius"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷凍能力値",
+          "en": "Freezing capability value"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "霜取りヒータ消費電力",
+          "en": "Defrosting heater power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ファンモータ消費電力",
+          "en": "Fan motor power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ヒーターモード",
+          "en": "Heater mode"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内照明タイプ",
+          "en": "Type of lighting inside the showcase"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "蛍光灯",
+                "en": "Fluorescent lights"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "LED",
+                "en": "LED"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "照明無し",
+                "en": "No lighting"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫外照明タイプ",
+          "en": "Type of lighting outside the case"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "蛍光灯",
+                "en": "Fluorescent lights"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "LED",
+                "en": "LED"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "照明無し",
+                "en": "No lighting"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内照明照度レベル設定",
+          "en": "Illuminance level setting of lighting inside the showcase"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫外照明照度レベル設定",
+          "en": "Illuminance level setting of lighting outside the case"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xEF": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内温度設定値",
+          "en": "Temperature setting of inside the case"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-127-126Celsius"
+        }
+      }
+    }
+  }
+}

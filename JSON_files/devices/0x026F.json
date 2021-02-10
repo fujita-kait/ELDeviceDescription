@@ -1,0 +1,230 @@
+{
+  "0x026F": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電気錠",
+      "en": "Electric lock"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "施錠設定1",
+          "en": "Lock setting1"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOCK-UNLOCK-4142"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "施錠設定2",
+          "en": "Lock setting 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOCK-UNLOCK-4142"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ドアガード施錠状態",
+          "en": "Lock status of door guard"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOCK-UNLOCK-4142"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "扉開閉状態",
+          "en": "Door open/close status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "在室・不在状態",
+          "en": "Occupant/ non-occupant status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "在室",
+                "en": "occupant"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "不在",
+                "en": "non-occupant"
+              }
+            }
+          ]
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "警報状態",
+          "en": "Alarm status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "通常状態（警報なし）",
+                "en": "Normal(no alarm)"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "こじ開け",
+                "en": "break open"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "扉解放",
+                "en": "door open"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "手動解錠",
+                "en": "manual unlocked"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "タンパ",
+                "en": "tampered"
+              }
+            }
+          ]
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動施錠モード設定",
+          "en": "Auto lock mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電池残量状態",
+          "en": "Battery level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "通常",
+                "en": "Ordinary level"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "交換通知有",
+                "en": "Notification of battery replacement"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

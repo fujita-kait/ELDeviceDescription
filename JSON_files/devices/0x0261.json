@@ -1,0 +1,484 @@
+{
+  "0x0261": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電動シャッター",
+      "en": "Electrically operated shutter"
+    },
+    "elProperties": {
+      "0x89": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "異常内容",
+          "en": "Fault description"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0x90": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "タイマ動作設定",
+          "en": "Timer operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "開速度設定",
+          "en": "Opening speed setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOW-MID-HIGH-414243"
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "閉速度設定",
+          "en": "Closing speed setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOW-MID-HIGH-414243"
+        }
+      },
+      "0xD2": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "動作時間設定値",
+          "en": "Operation time"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "second"
+        }
+      },
+      "0xE0": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "開閉設定１",
+              "en": "Open/close setting 1"
+            },
+            "accessRule": {
+              "get": "required_c",
+              "set": "required_c",
+              "inf": "required"
+            },
+            "data": {
+              "$ref": "#/definitions/state_OPEN-CLOSE-STOP-414243"
+            },
+            "note": {
+              "ja": "0xE0または0xE7のいずれかが必須",
+              "en": "either 0xE0 or 0xE7 is required"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "開閉動作設定",
+              "en": "Open/Close setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "required"
+            },
+            "data": {
+              "$ref": "#/definitions/state_OPEN-CLOSE-STOP-414243"
+            }
+          }
+        ]
+      },
+      "0xE1": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "開度レベル設定１",
+              "en": "Degree-of-opening level1"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/level_31-8"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "開度レベル設定",
+              "en": "Degree-of-opening level"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/number_0-100percent"
+            }
+          }
+        ]
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ブラインド角度設定値",
+          "en": "Blind angle setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-180degree"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "開閉速度設定",
+          "en": "Opening/closing speed setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOW-MID-HIGH-414243"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "C"
+        },
+        "propertyName": {
+          "ja": "開度レベル設定2",
+          "en": "Degree-of-opening level2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-255"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電気錠設定",
+          "en": "Electric lock setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOCK-UNLOCK-4142"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "C"
+        },
+        "propertyName": {
+          "ja": "開閉設定2",
+          "en": "Open/Close setting2"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "required_c",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        },
+        "note": {
+          "ja": "0xE0または0xE7のいずれかが必須",
+          "en": "either 0xE0 or 0xE7 is required"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "遠隔操作設定状態",
+          "en": "Remote operation setting status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "ON（許可）",
+                "en": "ON(permitted)"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "OFF（禁止）",
+                "en": "OFF(prohibited)"
+              }
+            }
+          ]
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "選択開度動作設定",
+          "en": "Selective degree-of-opening setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "開度レベル設定位置開",
+                "en": "Degree-of-setting position: Open"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "動作時間設定値開",
+                "en": "Operation time setting value: Open"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "動作時間設定値閉",
+                "en": "Operation time setting value: Close"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "ローカル設定位置",
+                "en": "Local setting position"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "スリット開度設定",
+                "en": "Slit degree-of-opning setting"
+              }
+            }
+          ]
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "開閉状態",
+          "en": "Open/closed status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "全開",
+                "en": "Fully open"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "全閉",
+                "en": "Fully closed"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "開動作中",
+                "en": "Opening"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "閉動作中",
+                "en": "Closing"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "途中停止",
+                "en": "Stopped halfway"
+              }
+            }
+          ]
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "スリット開度設定",
+          "en": "Slit degree-of-opening"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ワンタイム開速度設定",
+          "en": "One-time opening speed setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOW-MID-HIGH-NONE-41424344"
+        }
+      },
+      "0xEF": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ワンタイム閉速度設定",
+          "en": "One-time closing speed setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_LOW-MID-HIGH-NONE-41424344"
+        }
+      }
+    }
+  }
+}

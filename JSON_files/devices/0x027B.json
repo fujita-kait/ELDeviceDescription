@@ -1,0 +1,492 @@
+{
+  "0x027B": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "床暖房",
+      "en": "Floor heater"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "Time set by ON timer"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ相対時間設定値",
+          "en": "Relative ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x94": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ予約設定",
+          "en": "OFF timer reservation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x95": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ時刻設定値",
+          "en": "Time set by OFF timer"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x96": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ相対時間設定値",
+          "en": "Relative OFF timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "M",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定2 設定可能最大レベル",
+          "en": "Maximum allowable setting level for temperature setting 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/number_49-63"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定1",
+          "en": "Temperature1"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "required_c",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-50Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        },
+        "note": {
+          "ja": "EPC=0xE0または0xE1のどちらかの実装が必須",
+          "en": "Either EPC=0xE0 or 0xE1 is required"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定2",
+          "en": "Temperature2"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "required_c",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-15"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        },
+        "note": {
+          "ja": "EPC=0xE0または0xE1のどちらかの実装が必須",
+          "en": "Either EPC=0xE0 or 0xE1 is required"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内温度計測値",
+          "en": "Measured room temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-127-125Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-7E"
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "B"
+            },
+            "propertyName": {
+              "ja": "床温度計測値",
+              "en": "Measured floor temperature"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_0-50Celsius"
+                },
+                {
+                  "$ref": "#/definitions/state_Undefined-7E"
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "C",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "床温度計測値",
+              "en": "Measured floor temperature"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_-127-125Celsius"
+                },
+                {
+                  "$ref": "#/definitions/state_Undefined-7E"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ゾーン切替え設定",
+          "en": "Zone change setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        },
+        "note": {
+          "ja": "b0〜b7を各々ゾーン0〜7に割当各ビット 1:制御有り、0:制御無し",
+          "en": "Assign b0 - b7 to zone0 - zone7, 1: yes, 0: no"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "特殊運転設定",
+          "en": "Special operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "通常運転",
+                "en": "Normal operation"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "ひかえめ運転",
+                "en": "Modest operation"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "ハイパワー運転",
+                "en": "High power operation"
+              }
+            }
+          ]
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "デイリータイマー設定",
+          "en": "Daily timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "タイマー切",
+                "en": "Timer off"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "タイマー１",
+                "en": "Timer1"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "タイマー２",
+                "en": "Timer2"
+              }
+            }
+          ]
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "デイリータイマー1設定",
+          "en": "Daily timer setting 1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        },
+        "note": {
+          "ja": "24時間を30分単位で分割、全６バイトを割り当てて、各bit 1:運転、0:停止",
+          "en": "Every bit of 6byte is assigned to 30 minute duration of 24H, 0:operation, 1:no operation"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "デイリータイマー2設定",
+          "en": "Daily timer setting 2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        },
+        "note": {
+          "ja": "24時間を30分単位で分割、全６バイトを割り当てて、各bit 1:運転、0:停止",
+          "en": "Every bit of 6byte is assigned to 30 minute duration of 24H, 0:operation, 1:no operation"
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定格消費電力値",
+          "en": "Rated power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "G",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "消費電力計測方法",
+          "en": "Power consumption measurement method"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "ノード単位",
+                "en": "Node unit"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "クラス単位",
+                "en": "Class unit"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "インスタンス単位",
+                "en": "Instance unit"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

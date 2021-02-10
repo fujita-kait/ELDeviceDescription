@@ -1,0 +1,708 @@
+{
+  "0x0602": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "テレビ",
+      "en": "Television"
+    },
+    "elProperties": {
+      "0x80": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "動作状態",
+          "en": "Operation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "表示制御設定",
+          "en": "Display control setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "表示",
+                "en": "Displaying enabled"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "非表示",
+                "en": "Displaying disabled"
+              }
+            }
+          ]
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "文字列設定受付可能状態",
+          "en": "Character string setting acceptance status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "Ready",
+                "en": "Ready"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "Busy",
+                "en": "Busy"
+              }
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "表示可能文字コード",
+          "en": "Supported character codes"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 2,
+          "bitmaps": [
+            {
+              "name": "ANSI_X3.4",
+              "descriptions": {
+                "ja": "ANSI X3.4",
+                "en": "ANSI X3.4"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Shift-JIS",
+              "descriptions": {
+                "ja": "Shift-JIS",
+                "en": "Shift-JIS"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "JIS",
+              "descriptions": {
+                "ja": "JIS",
+                "en": "JIS"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000100"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Japanese_EUC",
+              "descriptions": {
+                "ja": "日本語EUC",
+                "en": "Japanese EUC"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "UCS-4",
+              "descriptions": {
+                "ja": "UCS-4",
+                "en": "UCS-4"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "UCS-2",
+              "descriptions": {
+                "ja": "UCS-2",
+                "en": "UCS-2"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00100000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Latin-1",
+              "descriptions": {
+                "ja": "Latin-1",
+                "en": "Latin-1"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b01000000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "UTF-8",
+              "descriptions": {
+                "ja": "UTF-8",
+                "en": "UTF-8"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b10000000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "Not implemented"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Implemented"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "伝達文字列設定",
+          "en": "Character string to present to the user"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "length",
+              "element": {
+                "$ref": "#/definitions/number_0-255"
+              }
+            },
+            {
+              "name": "characterCode",
+              "element": {
+                "type": "bitmap",
+                "size": 2,
+                "bitmaps": [
+                  {
+                    "name": "ANSI_X3.4",
+                    "descriptions": {
+                      "ja": "ANSI X3.4",
+                      "en": "ANSI X3.4"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b00000001"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Shift-JIS",
+                    "descriptions": {
+                      "ja": "Shift-JIS",
+                      "en": "Shift-JIS"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b00000010"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "JIS",
+                    "descriptions": {
+                      "ja": "JIS",
+                      "en": "JIS"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b00000100"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Japanese_EUC",
+                    "descriptions": {
+                      "ja": "日本語EUC",
+                      "en": "Japanese EUC"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b00001000"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "UCS-4",
+                    "descriptions": {
+                      "ja": "UCS-4",
+                      "en": "UCS-4"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b00010000"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "UCS-2",
+                    "descriptions": {
+                      "ja": "UCS-2",
+                      "en": "UCS-2"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b00100000"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Latin-1",
+                    "descriptions": {
+                      "ja": "Latin-1",
+                      "en": "Latin-1"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b01000000"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "UTF-8",
+                    "descriptions": {
+                      "ja": "UTF-8",
+                      "en": "UTF-8"
+                    },
+                    "position": {
+                      "index": 0,
+                      "bitMask": "0b10000000"
+                    },
+                    "value": {
+                      "type": "state",
+                      "size": 0,
+                      "enum": [
+                        {
+                          "edt": 0,
+                          "state": {
+                            "ja": "非搭載",
+                            "en": "Not implemented"
+                          }
+                        },
+                        {
+                          "edt": 1,
+                          "state": {
+                            "ja": "搭載",
+                            "en": "Implemented"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "constant_0x00",
+              "element": {
+                "$ref": "#/definitions/number_0"
+              }
+            },
+            {
+              "name": "characterString",
+              "element": {
+                "$ref": "#/definitions/raw_1-244"
+              }
+            }
+          ]
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "受付け伝達文字列長",
+          "en": "Length of character string accepted"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "length",
+              "element": {
+                "$ref": "#/definitions/number_0-244"
+              }
+            },
+            {
+              "name": "reserved",
+              "element": {
+                "type": "state",
+                "size": 1,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "state": {
+                      "ja": "reserved",
+                      "en": "reserved"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

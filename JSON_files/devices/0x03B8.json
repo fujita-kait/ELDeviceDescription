@@ -1,0 +1,773 @@
+{
+  "0x03B8": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "オーブンレンジ",
+      "en": "Combination microwave oven"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ドア開閉状態",
+          "en": "Door open/close status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加熱状態",
+          "en": "Heating status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "初期状態",
+                "en": "Initial state"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "運転中",
+                "en": "Heating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "一時停止中",
+                "en": "Heating suspended"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "完了報知中",
+                "en": "Reporting completion of heating cycle"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "設定中",
+                "en": "Setting"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "予熱中",
+                "en": "Preheating"
+              }
+            },
+            {
+              "edt": "0x46",
+              "state": {
+                "ja": "予熱完了保温中",
+                "en": "Preheat temperature maintenance"
+              }
+            },
+            {
+              "edt": "0x47",
+              "state": {
+                "ja": "加熱途中報知一時停止中",
+                "en": "Heating temporarily stopped for manual cooking action"
+              }
+            }
+          ]
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加熱設定",
+          "en": "Heating setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "加熱開始・再開",
+                "en": "Start/restart heating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "加熱一時停止",
+                "en": "Suspend heating"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "加熱停止",
+                "en": "Stop heating"
+              }
+            }
+          ]
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動メニューコース設定",
+          "en": "Automatic heating menu setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-254"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFF",
+                  "state": {
+                    "ja": "未設定",
+                    "en": "undefined"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "オーブンモード設定",
+          "en": "Oven mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "自動選択",
+                "en": "Automatic selection"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "対流オーブン",
+                "en": "Convection oven"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "熱風オーブン",
+                "en": "Circulation oven"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "複合オーブン",
+                "en": "Hybrid oven"
+              }
+            },
+            {
+              "edt": "0xFF",
+              "state": {
+                "ja": "未設定",
+                "en": "undefined"
+              }
+            }
+          ]
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "オーブン予熱設定",
+          "en": "Oven preheating setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "予熱あり",
+                "en": "With preheating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予熱なし",
+                "en": "Without preheating"
+              }
+            },
+            {
+              "edt": "0xFF",
+              "state": {
+                "ja": "未設定",
+                "en": "undefined"
+              }
+            }
+          ]
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "発酵モード設定",
+          "en": "Fermenting mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "自動選択",
+                "en": "Automatic selection"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "対流発酵",
+                "en": "Convection fermentation"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "熱風発酵",
+                "en": "Circulation fermentation"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "複合発酵",
+                "en": "Hybrid fermentation"
+              }
+            },
+            {
+              "edt": "0x51",
+              "state": {
+                "ja": "電子レンジ発酵",
+                "en": "Microwave fermentation"
+              }
+            },
+            {
+              "edt": "0xFF",
+              "state": {
+                "ja": "未設定",
+                "en": "undefined"
+              }
+            }
+          ]
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加熱モード設定",
+          "en": "Heating mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "電子レンジ加熱",
+                "en": "Microwave heating"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "解凍",
+                "en": "Defrosting"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "オーブン",
+                "en": "Oven"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "グリル",
+                "en": "Grill"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "トースト",
+                "en": "Toaster"
+              }
+            },
+            {
+              "edt": "0x46",
+              "state": {
+                "ja": "発酵",
+                "en": "Fermenting"
+              }
+            },
+            {
+              "edt": "0x47",
+              "state": {
+                "ja": "煮込み",
+                "en": "Stewing"
+              }
+            },
+            {
+              "edt": "0x48",
+              "state": {
+                "ja": "スチーム加熱",
+                "en": "Steaming"
+              }
+            },
+            {
+              "edt": "0x51",
+              "state": {
+                "ja": "電子レンジ２段加熱",
+                "en": "Two stage microwave heating"
+              }
+            },
+            {
+              "edt": "0xFF",
+              "state": {
+                "ja": "未設定",
+                "en": "undefined"
+              }
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動加熱設定",
+          "en": "Automatic heating setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動",
+                "en": "Automatic"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "マニュアル",
+                "en": "Manual"
+              }
+            },
+            {
+              "edt": "0xFF",
+              "state": {
+                "ja": "未設定",
+                "en": "undefined"
+              }
+            }
+          ]
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動加熱レベル設定",
+          "en": "Automatic heating level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-5"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFF",
+                  "state": {
+                    "ja": "未設定",
+                    "en": "undefined"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "庫内温度設定値",
+          "en": "Chamber temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-2732-32766",
+              "unit": "Celsius",
+              "multipleOf": 0.1
+            },
+            {
+              "type": "state",
+              "size": 2,
+              "enum": [
+                {
+                  "edt": "0x8001",
+                  "state": {
+                    "ja": "自動設定",
+                    "en": "Automatic"
+                  }
+                },
+                {
+                  "edt": "0x8002",
+                  "state": {
+                    "ja": "未設定",
+                    "en": "undefined"
+                  },
+                  "readOnly": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "仕上がり温度設定値",
+          "en": "Food temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-2732-32766",
+              "unit": "Celsius",
+              "multipleOf": 0.1
+            },
+            {
+              "type": "state",
+              "size": 2,
+              "enum": [
+                {
+                  "edt": "0x8002",
+                  "state": {
+                    "ja": "未設定",
+                    "en": "undefined"
+                  },
+                  "readOnly": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加熱時間設定値",
+          "en": "Heating time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time"
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加熱残時間設定値",
+          "en": "Remaining heating time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time"
+        }
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電子レンジ加熱出力設定値",
+          "en": "Microwave heating power setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "途中報知パターン設定",
+          "en": "Prompt message setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_8"
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "付属品設定",
+          "en": "Accessories to combination microwave oven setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "表示文字列設定",
+          "en": "Display character string setting"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_40"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電子レンジ2段加熱時間設定値",
+          "en": "Two-stage microwave heating setting (duration)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "Heating1st",
+              "element": {
+                "type": "time"
+              }
+            },
+            {
+              "name": "Heating2nd",
+              "element": {
+                "type": "time"
+              }
+            }
+          ]
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電子レンジ2段加熱出力設定値",
+          "en": "Two-stage microwave heating setting (heating power)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "Heating1st",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "W"
+              }
+            },
+            {
+              "name": "Heating2nd",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "W"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "0x028B": {
+    "validRelease": {
+      "from": "H",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "灯油メータ",
+      "en": "Kerosense meter"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算灯油消費量計測値",
+          "en": "Measured cumulative amount of kerosene consumption"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "L",
+          "multipleOf": 0.1
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算灯油消費量計測値履歴",
+          "en": "History of measured cumulative amounts of kerosene consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 48,
+          "maxItems": 48,
+          "items": {
+            "$ref": "#/definitions/number_0-999999999",
+            "unit": "L",
+            "multipleOf": 0.1
+          }
+        }
+      }
+    }
+  }
+}

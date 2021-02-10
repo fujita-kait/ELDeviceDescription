@@ -1,0 +1,34 @@
+{
+  "0x002D": {
+    "validRelease": {
+      "from": "F",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "気圧センサ",
+      "en": "Air Pressure sensor"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "気圧計測値",
+          "en": "Air pressure measurement"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "hPa",
+          "multipleOf": 0.1
+        }
+      }
+    }
+  }
+}

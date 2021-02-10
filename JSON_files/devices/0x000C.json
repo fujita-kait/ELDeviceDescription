@@ -1,0 +1,34 @@
+{
+  "0x000C": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "酸素センサ",
+      "en": "Oxygen sensor"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "酸素濃度計測値",
+          "en": "Measured value of oxygen concentration"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-10000",
+          "unit": "%",
+          "multipleOf": 0.01
+        }
+      }
+    }
+  }
+}

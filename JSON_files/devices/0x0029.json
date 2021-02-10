@@ -1,0 +1,100 @@
+{
+  "0x0029": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "開閉センサ",
+      "en": "Open/close sensor"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検知閾値レベル設定",
+          "en": "Detection threshold level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "開度検知状態２",
+          "en": "Degree-of opening detection status 2"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        },
+        "note": {
+          "ja": "0xB1または0xE0のいずれかが必須",
+          "en": "either 0xB1 or 0xE0 is required"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "開度検知状態１",
+          "en": "Degree-of opening detection status 1"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x30",
+                  "state": {
+                    "ja": "閉検知有り",
+                    "en": "Close detected"
+                  }
+                },
+                {
+                  "edt": "0x39",
+                  "state": {
+                    "ja": "開度不明",
+                    "en": "Opening level unknown"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "note": {
+          "ja": "0xB1または0xE0のいずれかが必須",
+          "en": "either 0xB1 or 0xE0 is required"
+        }
+      }
+    }
+  }
+}

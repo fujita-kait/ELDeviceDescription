@@ -1,0 +1,1397 @@
+{
+  "0x026B": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "電気温水器",
+      "en": "Electric water heater"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB0": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "H"
+            },
+            "propertyName": {
+              "ja": "沸き上げ自動設定",
+              "en": "Automatic water heating setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "自動沸き上げ",
+                    "en": "Auto Heating"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "手動沸き上げ停止",
+                    "en": "Manual No Heating"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "手動沸き上げ",
+                    "en": "Manual Heating"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "I",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "沸き上げ自動設定",
+              "en": "Automatic water heating setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "required"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "自動沸き上げ",
+                    "en": "Auto Heating"
+                  }
+                },
+                {
+                  "edt": "0x43",
+                  "state": {
+                    "ja": "手動沸き上げ停止",
+                    "en": "Manual No Heating"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "手動沸き上げ",
+                    "en": "Manual Heating"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "沸き上げ湯温自動設定",
+          "en": "Automatic water temperature control setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xB2": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "H"
+            },
+            "propertyName": {
+              "ja": "沸き上げ中状態",
+              "en": "Water heater status"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "I",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "沸き上げ中状態",
+              "en": "Water heater status"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "required"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          }
+        ]
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "沸き上げ湯温設定値",
+          "en": "Water heating temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-100Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FD"
+            }
+          ]
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "手動沸き上げ停止日数設定値",
+          "en": "Manual water heating stop days setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-252",
+              "unit": "day"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFD",
+                  "state": {
+                    "ja": "無限",
+                    "en": "No time limit"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xB5": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "手動沸き上げOFFタイマ相対時間設定値",
+          "en": "Relative time setting value for manual water heating OFF"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB6": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "タンク運転モード設定",
+          "en": "Tank operation mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "標準",
+                "en": "Standard"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "節約",
+                "en": "Saving"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "多め",
+                "en": "Extra"
+              }
+            }
+          ]
+        }
+      },
+      "0xC0": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "昼間沸き増し許可設定",
+              "en": "Daytime reheating permission setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "昼間沸き増し許可設定",
+              "en": "Daytime reheating permission setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          }
+        ]
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温水器湯温計測値",
+          "en": "Measured temperature of water in water heater"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100Celsius"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "警報発生状態",
+          "en": "Alarm status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 4,
+          "bitmaps": [
+            {
+              "name": "noHotWater",
+              "descriptions": {
+                "ja": "湯切れ警報",
+                "en": "No Hot Water"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "正常",
+                      "en": "No Alarm"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "発生",
+                      "en": "Alarm"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "leaking",
+              "descriptions": {
+                "ja": "漏水警報",
+                "en": "Leaking"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "正常",
+                      "en": "No Alarm"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "発生",
+                      "en": "Alarm"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "freezing",
+              "descriptions": {
+                "ja": "凍結警報",
+                "en": "Freezing"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000100"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "正常",
+                      "en": "No Alarm"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "発生",
+                      "en": "Alarm"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "給湯中状態",
+          "en": "Hot water supply status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂保温運転相対時間設定値",
+          "en": "Relative time setting for keeping bath temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "エネルギーシフト参加状態",
+          "en": "Participation in Energy Shift"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x01",
+              "state": {
+                "ja": "参加",
+                "en": "Participation"
+              }
+            },
+            {
+              "edt": "0x00",
+              "state": {
+                "ja": "不参加",
+                "en": "Non Participation"
+              }
+            }
+          ]
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "沸き上げ開始基準時刻",
+          "en": "Standard time to start heating"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "number",
+          "format": "uint8",
+          "enum": [
+            1,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
+        }
+      },
+      "0xC9": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "エネルギーシフト回数",
+          "en": "Number of energy shifts"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-2"
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "昼間沸き上げシフト時刻１",
+          "en": "Daytime heating shift time 1"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_9-17"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "クリア状態",
+                    "en": "Undefined"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xCB": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "昼間沸き上げシフト時刻１での沸き上げ予測電力量",
+          "en": "Expected electric energy at daytime heating shift time 1"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "at1000",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1300",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1500",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1700",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            }
+          ]
+        }
+      },
+      "0xCC": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "時間あたり消費電力量１",
+          "en": "Consumption of electric energy per hour 1"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "at1000",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1300",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1500",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1700",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            }
+          ]
+        }
+      },
+      "0xCD": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "昼間沸き上げシフト時刻２",
+          "en": "Daytime heating shift time 2"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_10-17"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "クリア状態",
+                    "en": "Undefined"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xCE": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "昼間沸き上げシフト時刻２での沸き上げ予測電力量",
+          "en": "Expected electric energy at daytime heating shift time 2"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "at1300",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1500",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1700",
+              "element": {
+                "$ref": "#/definitions/number_0-4294967293",
+                "unit": "Wh"
+              }
+            }
+          ]
+        }
+      },
+      "0xCF": {
+        "validRelease": {
+          "from": "I",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "時間あたり消費電力量２",
+          "en": "Consumption of electric energy per hour 2"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "at1300",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1500",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            },
+            {
+              "name": "at1700",
+              "element": {
+                "$ref": "#/definitions/number_0-65533",
+                "unit": "Wh"
+              }
+            }
+          ]
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "給湯温度設定値",
+          "en": "Temperature of supplied water setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100Celsius"
+        }
+      },
+      "0xD3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂温度設定値",
+          "en": "Bath water temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100Celsius"
+        }
+      },
+      "0xD4": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定４",
+          "en": "Bath water volume setting4"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xD5": {
+        "validRelease": {
+          "from": "C",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定４設定可能最大レベル",
+          "en": "Bath water volume setting4 maximum settable level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-255"
+        }
+      },
+      "0xD6": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "音量設定値",
+          "en": "Volume setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xD7": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ミュート設定",
+          "en": "Mute setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xD8": {
+        "validRelease": {
+          "from": "F",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "給湯可能湯量値",
+          "en": "Remaining hot water volume"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xD9": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "余剰電力量予測値",
+          "en": "Surplus electric energy power prediction value"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "month",
+              "element": {
+                "$ref": "#/definitions/number_1-12"
+              }
+            },
+            {
+              "name": "day",
+              "element": {
+                "$ref": "#/definitions/number_1-31"
+              }
+            },
+            {
+              "name": "hour",
+              "element": {
+                "$ref": "#/definitions/number_0-23"
+              }
+            },
+            {
+              "name": "electricEnergy",
+              "element": {
+                "type": "array",
+                "itemSize": 2,
+                "minItems": 24,
+                "maxItems": 24,
+                "items": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/number_-32767-32765",
+                      "unit": "Wh",
+                      "multipleOf": 10
+                    },
+                    {
+                      "type": "state",
+                      "size": 2,
+                      "enum": [
+                        {
+                          "edt": "0x8000",
+                          "state": {
+                            "ja": "無効値",
+                            "en": "Invalid data"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "0xDB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冬季H/Pユニット定格消費電力",
+          "en": "Rated power consumption of H/P unit in wintertime"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xDC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "中間期H/Pユニット定格消費電力",
+          "en": "Rated power consumption of H/P unit in in-between season"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xDD": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "夏季H/Pユニット定格消費電力",
+          "en": "Rated power consumption of H/P unit in summertime"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "沸き上げ湯量設定値",
+          "en": "Bath water volume setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "残湯量計測値",
+          "en": "Measured amount of water remaining in tank"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "タンク容量値",
+          "en": "Tank capacity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      },
+      "0xE3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂自動モード設定",
+          "en": "Automatic Bath Water Heating Mode Setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "手動風呂追い焚き動作設定",
+          "en": "Manual bath reheating operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xE5": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "風呂足し湯動作設定",
+              "en": "Manual bath hot water addition function setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "手動風呂足し湯動作設定",
+              "en": "Manual bath hot water addition function setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          }
+        ]
+      },
+      "0xE6": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "風呂ぬるめ動作設定",
+              "en": "Manual lukewarm water temperature lowering function setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "手動風呂ぬるめ動作設定",
+              "en": "Manual lukewarm water temperature lowering function setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_ON-OFF-4142"
+            }
+          }
+        ]
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定１",
+          "en": "Bath water volume setting1"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-253",
+          "unit": "L"
+        }
+      },
+      "0xE8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定２",
+          "en": "Bath water volume setting2"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_31-8"
+        }
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "浴室優先設定",
+          "en": "Bathroom pripority setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂動作状態監視",
+          "en": "Bath Operation Status Monitor"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "湯張り中",
+                "en": "Running Hot Water"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "停止中",
+                "en": "No Operation"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "保温中",
+                "en": "Keeping Temperature"
+              }
+            }
+          ]
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風呂湯量設定３",
+          "en": "Bath water volume setting3"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "L"
+        }
+      }
+    }
+  }
+}

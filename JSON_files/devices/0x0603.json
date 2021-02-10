@@ -1,0 +1,68 @@
+{
+  "0x0603": {
+    "validRelease": {
+      "from": "E",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "オーディオ",
+      "en": "Audio"
+    },
+    "elProperties": {
+      "0xB8": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "音量設定値",
+          "en": "Volume setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xB9": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ミュート設定",
+          "en": "Mute setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xBC": {
+        "validRelease": {
+          "from": "E",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "入力ソース設定",
+          "en": "Input source setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      }
+    }
+  }
+}

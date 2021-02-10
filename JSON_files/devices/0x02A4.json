@@ -1,0 +1,237 @@
+{
+  "0x02A4": {
+    "validRelease": {
+      "from": "J",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "拡張照明システム",
+      "en": "Extended lighting system"
+    },
+    "elProperties": {
+      "0xB0": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "照度レベル設定",
+          "en": "Illuminance level setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "シーン制御設定",
+          "en": "Scene control setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_1-253"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "state": {
+                    "ja": "未設定",
+                    "en": "Not set"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "シーン制御設定可能数",
+          "en": "Number that can assign scene control setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_1-253"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電力消費率リスト",
+          "en": "Power consumption rate list"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 1,
+          "minItems": 1,
+          "maxItems": 253,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/number_0-100percent"
+              },
+              {
+                "type": "state",
+                "size": 1,
+                "enum": [
+                  {
+                    "edt": "0xFF",
+                    "state": {
+                      "ja": "不明",
+                      "en": "Unknown"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "全灯時消費電力",
+          "en": "Power consumption when fully lighted"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "節電可能消費電力",
+          "en": "Possible power savings"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "W"
+        }
+      },
+      "0xC5": {
+        "validRelease": {
+          "from": "J",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "消費電力制限設定",
+          "en": "Power consumption limit setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-65533",
+              "unit": "W"
+            },
+            {
+              "type": "state",
+              "size": 2,
+              "enum": [
+                {
+                  "edt": "0x0000",
+                  "state": {
+                    "ja": "電力制限解除",
+                    "en": "Canceling power consumption restriction."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自動動作制御設定",
+          "en": "Automatic operation controlling setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "K",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "フェード制御変化時間設定",
+          "en": "Fading control change time setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-3600",
+          "unit": "second"
+        }
+      }
+    }
+  }
+}

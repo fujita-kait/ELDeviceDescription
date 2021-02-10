@@ -1,0 +1,34 @@
+{
+  "0x0011": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "温度センサ",
+      "en": "Temperature sensor"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度計測値",
+          "en": "Temperature value"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-2732-32766",
+          "unit": "Celsius",
+          "multipleOf": 0.1
+        }
+      }
+    }
+  }
+}

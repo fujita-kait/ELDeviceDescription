@@ -1,0 +1,527 @@
+{
+  "0x0289": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "スマートガスメータ",
+      "en": "Smart gas meter"
+    },
+    "elProperties": {
+      "0xD0": {
+        "validRelease": {
+          "from": "B",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "日時付積算ガス消費量計測値情報",
+          "en": "Measured cumulative gas consumption information with date and time"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_11"
+        },
+        "note": {
+          "ja": "EPC=0xD0または0xE2のどちらかの実装が必須",
+          "en": "Either EPC=0xD0 or 0xE2 is required"
+        }
+      },
+      "0xD1": {
+        "validRelease": {
+          "from": "B",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ガス消費量履歴情報",
+          "en": "Historical information of cumulative gas consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_109"
+        }
+      },
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ガス区分設定",
+          "en": "Gas meter classification setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "都市ガス",
+                "en": "City gas"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "LPガス",
+                "en": "LP gas"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "天然ガス",
+                "en": "Natural gas"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "所有者区分設定",
+          "en": "Owner classification setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x30",
+              "state": {
+                "ja": "指定無し",
+                "en": "Not specified"
+              }
+            },
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "都市ガス",
+                "en": "City gas"
+              }
+            },
+            {
+              "edt": "0x32",
+              "state": {
+                "ja": "LPガス",
+                "en": "LP gas"
+              }
+            },
+            {
+              "edt": "0x33",
+              "state": {
+                "ja": "民間会社",
+                "en": "Private-sector company"
+              }
+            },
+            {
+              "edt": "0x34",
+              "state": {
+                "ja": "個人",
+                "en": "Indivisual"
+              }
+            }
+          ]
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量計測値",
+          "en": "Measured cumulative gas consumption"
+        },
+        "accessRule": {
+          "get": "required_c",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "multipleOf": 0.001,
+          "unit": "m3"
+        },
+        "note": {
+          "ja": "EPC=0xD0または0xE2のどちらかの実装が必須",
+          "en": "Either EPC=0xD0 or 0xE2 is required"
+        }
+      },
+      "0xE3": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "A"
+            },
+            "propertyName": {
+              "ja": "積算ガス消費量計測値単位",
+              "en": "Unit for measured cumulative gas consumption"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "numericValue",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "numericValue": 1
+                },
+                {
+                  "edt": "0x01",
+                  "numericValue": 0.1
+                },
+                {
+                  "edt": "0x02",
+                  "numericValue": 0.01
+                },
+                {
+                  "edt": "0x03",
+                  "numericValue": 0.001
+                },
+                {
+                  "edt": "0x04",
+                  "numericValue": 0.0001
+                },
+                {
+                  "edt": "0x05",
+                  "numericValue": 1e-05
+                },
+                {
+                  "edt": "0x06",
+                  "numericValue": 1e-06
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "B",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "積算ガス消費量計測値単位",
+              "en": "Unit for measured cumulative gas consumption"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "numericValue",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x00",
+                  "numericValue": 1
+                },
+                {
+                  "edt": "0x01",
+                  "numericValue": 0.1
+                },
+                {
+                  "edt": "0x02",
+                  "numericValue": 0.01
+                },
+                {
+                  "edt": "0x03",
+                  "numericValue": 0.001
+                },
+                {
+                  "edt": "0x04",
+                  "numericValue": 0.0001
+                },
+                {
+                  "edt": "0x05",
+                  "numericValue": 1e-05
+                },
+                {
+                  "edt": "0x06",
+                  "numericValue": 1e-06
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xE4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量履歴情報",
+          "en": "Historical data of measured cumulative gas consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_194"
+        }
+      },
+      "0xE5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量履歴収集日設定",
+          "en": "Day setting for which the historical data of measured cumulative gas consumption is to be retrieved"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-99"
+        }
+      },
+      "0xE6": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "A"
+            },
+            "propertyName": {
+              "ja": "検針データ異常検知状態",
+              "en": "Detection of abnormal value in metering data"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "B",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "検針データ異常検知状態",
+              "en": "Detection of abnormal value in metering data"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          }
+        ]
+      },
+      "0xE7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "セキュリティデータ情報",
+          "en": "Security data information"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_10"
+        }
+      },
+      "0xE8": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "A"
+            },
+            "propertyName": {
+              "ja": "センター弁遮断状態",
+              "en": "Valve closure by the Center"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          },
+          {
+            "validRelease": {
+              "from": "B",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "センター弁遮断状態",
+              "en": "Valve closure by the Center"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "$ref": "#/definitions/state_YES-NO-4142"
+            }
+          }
+        ]
+      },
+      "0xE9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "センター弁遮断復帰許可状態",
+          "en": "Permission from the Center to reopen the valve closed by the Center"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xEA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "緊急弁遮断状態",
+          "en": "Emergency closure of shutoff valve"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_YES-NO-4142"
+        }
+      },
+      "0xEB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "遮断弁開閉状態",
+          "en": "Shutoff valve status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xEC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "遮断理由履歴情報",
+          "en": "Historical data of shutoff reasons"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xED": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ID 番号設定",
+          "en": "ID number setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        }
+      },
+      "0xEE": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "検定満期設定",
+          "en": "Verification expiration setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_6"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "0x03C5": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "洗濯機",
+      "en": "Washing machine"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ相対時間設定値",
+          "en": "ON timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ドア開閉状態",
+          "en": "Door/cover open/close status"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_OPEN-CLOSE-4142"
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗濯設定",
+          "en": "Washing machine setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "洗濯開始・再開",
+                "en": " Start/restart the washing cycle"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "洗濯一時停止",
+                "en": " Suspend the washing cycle"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "洗濯停止",
+                "en": " Stop the washing cycle"
+              }
+            }
+          ]
+        }
+      },
+      "0xE1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗濯遷移状態",
+          "en": "Current stage of washing cycle"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "洗い",
+                "en": "Washing"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "すすぎ",
+                "en": "Rinsing"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "脱水",
+                "en": "Spin drying"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "一時停止",
+                "en": "Suspended"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "洗濯完了・停止",
+                "en": "The washing cycle stopped/completed"
+              }
+            }
+          ]
+        }
+      },
+      "0xE6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "洗濯残り時間",
+          "en": "Time remaining to complete washing cycle"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time"
+        }
+      }
+    }
+  }
+}

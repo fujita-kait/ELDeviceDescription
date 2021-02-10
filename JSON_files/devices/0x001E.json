@@ -1,0 +1,33 @@
+{
+  "0x001E": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "差圧センサ",
+      "en": "Differential pressure sensor"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "差圧計測値",
+          "en": "Measured value of Differential pressure"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_-32767-32766",
+          "unit": "Pa"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "0x0282": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ガスメータ",
+      "en": "Gas meter"
+    },
+    "elProperties": {
+      "0xE0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量計測値",
+          "en": "Cumulative amount of gas consumption measurement value"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-999999999",
+          "unit": "m3",
+          "multipleOf": 0.001
+        }
+      },
+      "0xE2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "積算ガス消費量計測値履歴",
+          "en": "Cumulative amounts of gas consumption measurement log"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "array",
+          "itemSize": 4,
+          "minItems": 48,
+          "maxItems": 48,
+          "items": {
+            "$ref": "#/definitions/number_0-999999999",
+            "unit": "m3",
+            "multipleOf": 0.001
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "0x05FA": {
+    "validRelease": {
+      "from": "H",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "並列処理併用型電力制御",
+      "en": "Parallel processing combination-type power control"
+    },
+    "elProperties": {
+      "0xC0": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "電力逸脱情報",
+          "en": "Power deviation information"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "required",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "削減電力情報",
+          "en": "Power reduction information"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "required",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_2"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "送信インターバル",
+          "en": "Transmission interval"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "required",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_1"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定格消費電力スレショルド",
+          "en": "Rated power consumption threshold"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/raw_3"
+        }
+      }
+    }
+  }
+}

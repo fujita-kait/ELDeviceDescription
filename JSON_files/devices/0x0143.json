@@ -1,0 +1,374 @@
+{
+  "0x0143": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "ファンヒータ",
+      "en": "Fan heater"
+    },
+    "elProperties": {
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "時刻予約、相対時間予約共に入",
+                "en": "Both the time- and relative time-based reservation functions are ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予約切",
+                "en": "Both reservation functions are OFF"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "時刻予約のみ入",
+                "en": "Time-based reservation functions is ON"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "相対時間予約のみ入",
+                "en": "Relative time-based reservation functions is ON"
+              }
+            }
+          ]
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ相対時間設定値",
+          "en": "ON timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x94": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ予約設定",
+          "en": "OFF timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "時刻予約、相対時間予約共に入",
+                "en": "Both the time- and relative time-based reservation functions are ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予約切",
+                "en": "Both reservation functions are OFF"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "時刻予約のみ入",
+                "en": "Time-based reservation functions is ON"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "相対時間予約のみ入",
+                "en": "Relative time-based reservation functions is ON"
+              }
+            }
+          ]
+        }
+      },
+      "0x95": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ時刻設定値",
+          "en": "OFF timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x96": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ相対時間設定値",
+          "en": "OFF timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度自動設定",
+          "en": "Automatic temperature control setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定値",
+          "en": "Temperature set value"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-50Celsius"
+        }
+      },
+      "0xBB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度計測値",
+          "en": "Measured temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-127-125Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-7E"
+            }
+          ]
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "延長運転設定",
+          "en": "Extensional operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "延長タイマ時間設定値",
+          "en": "Extensional operation timer time setting value"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "イオン放出設定",
+          "en": "Ion emission setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xC3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "搭載イオン放出方法",
+          "en": "Implemented ion emission method"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "negativeIonMethod",
+              "descriptions": {
+                "ja": "搭載イオン放出方法",
+                "en": "Implemented ion emission method"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b0000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "マイナスイオン方式",
+                      "en": "Negative ion methos"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "クラスタイオン方式",
+                      "en": "Cluster ion method"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "油量レベル",
+          "en": "Oil amount level"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/level_40-6"
+        }
+      }
+    }
+  }
+}

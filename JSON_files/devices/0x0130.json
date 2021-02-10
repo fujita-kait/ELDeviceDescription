@@ -1,0 +1,2685 @@
+{
+  "0x0130": {
+    "validRelease": {
+      "from": "A",
+      "to": "latest"
+    },
+    "className": {
+      "ja": "家庭用エアコン",
+      "en": "Home air conditioner"
+    },
+    "elProperties": {
+      "0x80": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "動作状態",
+          "en": "Operation status"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-3031"
+        }
+      },
+      "0x8F": {
+        "validRelease": {
+          "from": "D",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "節電動作設定",
+          "en": "Power-saving operation setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0x90": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ予約設定",
+          "en": "ON timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "時刻予約、相対時間予約共に入",
+                "en": "Both the time- and relative time-based reservation functions are ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予約切",
+                "en": "Both reservation functions are OFF"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "時刻予約のみ入",
+                "en": "Time-based reservation functions is ON"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "相対時間予約のみ入",
+                "en": "Relative time-based reservation functions is ON"
+              }
+            }
+          ]
+        }
+      },
+      "0x91": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ時刻設定値",
+          "en": "ON timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x92": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ONタイマ相対時間設定値",
+          "en": "ON timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2,
+          "maximumOfHour": 255
+        }
+      },
+      "0x94": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ予約設定",
+          "en": "OFF timer setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "時刻予約、相対時間予約共に入",
+                "en": "Both the time- and relative time-based reservation functions are ON"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予約切",
+                "en": "Both reservation functions are OFF"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "時刻予約のみ入",
+                "en": "Time-based reservation functions is ON"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "相対時間予約のみ入",
+                "en": "Relative time-based reservation functions is ON"
+              }
+            }
+          ]
+        }
+      },
+      "0x95": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ時刻設定値",
+          "en": "OFF timer setting(time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2
+        }
+      },
+      "0x96": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "OFFタイマ相対時間設定値",
+          "en": "OFF timer setting(relative time)"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "time",
+          "size": 2,
+          "maximumOfHour": 255
+        }
+      },
+      "0xA0": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "風量設定",
+              "en": "Air flow rate setting"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/level_31-8"
+                },
+                {
+                  "$ref": "#/definitions/state_AUTO-41"
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "風量設定",
+              "en": "Air flow rate setting"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "required",
+              "inf": "required"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/level_31-8"
+                },
+                {
+                  "$ref": "#/definitions/state_AUTO-41"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xA1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風向自動設定",
+          "en": "Automatic control of air flow direction setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "Auto",
+                "en": "Automatic"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "非Auto",
+                "en": "Non-automatic"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "上下Auto",
+                "en": "Auto(vertical)"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "左右Auto",
+                "en": "Auto(horizontal)"
+              }
+            }
+          ]
+        }
+      },
+      "0xA3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風向スイング設定",
+          "en": "Automatic swing of air flow setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x31",
+              "state": {
+                "ja": "OFF",
+                "en": "OFF"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "上下",
+                "en": "Vertical"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "左右",
+                "en": "Holizontal"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "上下左右",
+                "en": "Vertical and Holizontal"
+              }
+            }
+          ]
+        }
+      },
+      "0xA4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風向上下設定",
+          "en": "Air flow direction(vertical) setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "上",
+                "en": "Uppermost"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "下",
+                "en": "Lowermost"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "中央",
+                "en": "Central"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "上中",
+                "en": "Midpoint between uppermost and central"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "下中",
+                "en": "Midpoint between lowermost and central"
+              }
+            }
+          ]
+        }
+      },
+      "0xA5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "風向左右設定",
+          "en": "Air flow direction(horizontal) setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "右中・右",
+                "en": "Right center and Right"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "左・左中",
+                "en": "Left and Left center"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "左中・中・右中",
+                "en": "Left center, Center and Right center"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "左・左中・右中・右",
+                "en": "Left, Left center, Right center and Right"
+              }
+            },
+            {
+              "edt": "0x51",
+              "state": {
+                "ja": "右",
+                "en": "Right"
+              }
+            },
+            {
+              "edt": "0x52",
+              "state": {
+                "ja": "右中",
+                "en": "Right center"
+              }
+            },
+            {
+              "edt": "0x54",
+              "state": {
+                "ja": "中",
+                "en": "Center"
+              }
+            },
+            {
+              "edt": "0x55",
+              "state": {
+                "ja": "中・右",
+                "en": "Center and right"
+              }
+            },
+            {
+              "edt": "0x56",
+              "state": {
+                "ja": "中・右中",
+                "en": "Center and Right center"
+              }
+            },
+            {
+              "edt": "0x57",
+              "state": {
+                "ja": "中・右中・右",
+                "en": "Center, Right center and Right"
+              }
+            },
+            {
+              "edt": "0x58",
+              "state": {
+                "ja": "左中",
+                "en": "Left center"
+              }
+            },
+            {
+              "edt": "0x59",
+              "state": {
+                "ja": "左中・右",
+                "en": "Left center and Right"
+              }
+            },
+            {
+              "edt": "0x5A",
+              "state": {
+                "ja": "左中・右中",
+                "en": "Left center and Right center"
+              }
+            },
+            {
+              "edt": "0x5B",
+              "state": {
+                "ja": "左中・右中・右",
+                "en": "Left center, Right center and Right"
+              }
+            },
+            {
+              "edt": "0x5C",
+              "state": {
+                "ja": "左中・中",
+                "en": "Left center and Center"
+              }
+            },
+            {
+              "edt": "0x5D",
+              "state": {
+                "ja": "左中・中・右",
+                "en": "Left center, Center and Right"
+              }
+            },
+            {
+              "edt": "0x5F",
+              "state": {
+                "ja": "左中・中・右中・右",
+                "en": "Left center, Center, Right center and Right"
+              }
+            },
+            {
+              "edt": "0x60",
+              "state": {
+                "ja": "左",
+                "en": "Left"
+              }
+            },
+            {
+              "edt": "0x61",
+              "state": {
+                "ja": "左・右",
+                "en": "Left and Right"
+              }
+            },
+            {
+              "edt": "0x62",
+              "state": {
+                "ja": "左・右中",
+                "en": "Left and Right center"
+              }
+            },
+            {
+              "edt": "0x63",
+              "state": {
+                "ja": "左・右中・右",
+                "en": "Left, Right center and Right"
+              }
+            },
+            {
+              "edt": "0x64",
+              "state": {
+                "ja": "左・中",
+                "en": "Left and Center"
+              }
+            },
+            {
+              "edt": "0x65",
+              "state": {
+                "ja": "左・中・右",
+                "en": "Left, Center and Right"
+              }
+            },
+            {
+              "edt": "0x66",
+              "state": {
+                "ja": "左・中・右中",
+                "en": "Left, Center and Right center"
+              }
+            },
+            {
+              "edt": "0x67",
+              "state": {
+                "ja": "左・中・右中・右",
+                "en": "Left, Center, Right center and Right"
+              }
+            },
+            {
+              "edt": "0x69",
+              "state": {
+                "ja": "左・左中・右",
+                "en": "Left, Left center and Right"
+              }
+            },
+            {
+              "edt": "0x6A",
+              "state": {
+                "ja": "左・左中・右中",
+                "en": "Left, Left center and Right center"
+              }
+            },
+            {
+              "edt": "0x6C",
+              "state": {
+                "ja": "左・左中・中",
+                "en": "Left, Left center and center"
+              }
+            },
+            {
+              "edt": "0x6D",
+              "state": {
+                "ja": "左・左中・中・右",
+                "en": "Left, Left center, Center and Right"
+              }
+            },
+            {
+              "edt": "0x6E",
+              "state": {
+                "ja": "左・左中・中・右中",
+                "en": "Left, Left center, Center and Right center"
+              }
+            },
+            {
+              "edt": "0x6F",
+              "state": {
+                "ja": "左・左中・中・右中・右",
+                "en": "Left, Left center, Center, Right center and Right"
+              }
+            }
+          ]
+        }
+      },
+      "0xAA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "特殊状態",
+          "en": "Special state"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "通常状態",
+                "en": "Normal operation"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "除霜状態",
+                "en": "Defrosting"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "予熱状態",
+                "en": "Preheating"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "排熱状態",
+                "en": "Heat removal"
+              }
+            }
+          ]
+        }
+      },
+      "0xAB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "非優先状態",
+          "en": "Non-priority state"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "通常状態",
+                "en": "Normal"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "非優先状態",
+                "en": "Non-priority"
+              }
+            }
+          ]
+        }
+      },
+      "0xB0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "運転モード設定",
+          "en": "Operation mode setting"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "required"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "自動",
+                "en": "Automatic"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "冷房",
+                "en": "Cooling"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "暖房",
+                "en": "Heating"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "除湿",
+                "en": "Dehumidification"
+              }
+            },
+            {
+              "edt": "0x45",
+              "state": {
+                "ja": "送風",
+                "en": "Air circulation"
+              }
+            },
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "その他",
+                "en": "Other"
+              }
+            }
+          ]
+        }
+      },
+      "0xB1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度自動設定",
+          "en": "Automatic temperature control setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xB2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "急速動作モード設定",
+          "en": "Normal/highspeed/silent operation setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "通常運転",
+                "en": "Normal"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "急速",
+                "en": "High speed"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "静音",
+                "en": "Silent"
+              }
+            }
+          ]
+        }
+      },
+      "0xB3": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "温度設定値",
+          "en": "Set temperature value"
+        },
+        "accessRule": {
+          "get": "required",
+          "set": "required",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-50Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FD"
+            }
+          ]
+        }
+      },
+      "0xB4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "除湿モード時相対湿度設定値",
+          "en": "Set value of relative humidity in dehumidifying mode"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-100percent"
+        }
+      },
+      "0xB5": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "冷房モード時温度設定値",
+          "en": "Set temperature value in cooling mode"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-50Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FD"
+            }
+          ]
+        }
+      },
+      "0xB6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "暖房モード時温度設定値",
+          "en": "Set temperature value in heating mode"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-50Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FD"
+            }
+          ]
+        }
+      },
+      "0xB7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "除湿モード時温度設定値",
+          "en": "Set temperature value in dehumidifying mode"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-50Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-FD"
+            }
+          ]
+        }
+      },
+      "0xB8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "定格消費電力値",
+          "en": "Rated power consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "object",
+          "properties": [
+            {
+              "name": "cooling",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-65533",
+                    "unit": "W"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0xFFFE",
+                        "state": {
+                          "ja": "未サポート",
+                          "en": "Not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "heating",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-65533",
+                    "unit": "W"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0xFFFE",
+                        "state": {
+                          "ja": "未サポート",
+                          "en": "Not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "dehumidifying",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-65533",
+                    "unit": "W"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0xFFFE",
+                        "state": {
+                          "ja": "未サポート",
+                          "en": "Not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "airCirculation",
+              "element": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/number_0-65533",
+                    "unit": "W"
+                  },
+                  {
+                    "type": "state",
+                    "size": 2,
+                    "enum": [
+                      {
+                        "edt": "0xFFFE",
+                        "state": {
+                          "ja": "未サポート",
+                          "en": "Not implemented"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xB9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "消費電流計測値",
+          "en": "Measured value of current consumption"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-65533",
+          "unit": "A",
+          "multipleOf": 0.1
+        }
+      },
+      "0xBA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "室内相対湿度計測値",
+          "en": "Measured value of room relative humidity"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_0-100percent"
+            },
+            {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0xFD",
+                  "state": {
+                    "ja": "計測不能",
+                    "en": "Not Applicable"
+                  },
+                  "readOnly": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "0xBB": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "室内温度計測値",
+              "en": "Measured value of room temperature"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_-127-125Celsius"
+                },
+                {
+                  "$ref": "#/definitions/state_Undefined-7E"
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "室内温度計測値",
+              "en": "Measured value of room temperature"
+            },
+            "accessRule": {
+              "get": "required",
+              "set": "notApplicable",
+              "inf": "optional"
+            },
+            "data": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/number_-127-125Celsius"
+                },
+                {
+                  "$ref": "#/definitions/state_Undefined-7E"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xBC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ユーザリモコン温度設定値",
+          "en": "Set temperature value of user remote control"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/number_0-50Celsius"
+        }
+      },
+      "0xBD": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "吹き出し温度計測値",
+          "en": "Measured cooled air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-127-125Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-7E"
+            }
+          ]
+        }
+      },
+      "0xBE": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "外気温度計測値",
+          "en": "Measured outdoor air temperature"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-127-125Celsius"
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-7E"
+            }
+          ]
+        }
+      },
+      "0xBF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "相対温度設定値",
+          "en": "Relative temperature setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/number_-127-125Celsius",
+              "multipleOf": 0.1
+            },
+            {
+              "$ref": "#/definitions/state_Undefined-7E"
+            }
+          ]
+        }
+      },
+      "0xC0": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気モード設定",
+          "en": "Ventilation function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "換気ON（排気方向）",
+                "en": "Ventilation function ON(outlet direction)"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "換気OFF",
+                "en": "Ventilation function OFF"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "換気ON（吸気方向）",
+                "en": "Ventilation function ON(intake direction)"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "換気ON（吸排気方向）",
+                "en": "Ventilation function ON(outlet and intake direction)"
+              }
+            }
+          ]
+        }
+      },
+      "0xC1": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加湿モード設定",
+          "en": "Humidifier function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xC2": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "換気風量設定",
+          "en": "Ventilation air flow rate setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        }
+      },
+      "0xC4": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "加湿量設定",
+          "en": "Degree of humidification setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/level_31-8"
+            },
+            {
+              "$ref": "#/definitions/state_AUTO-41"
+            }
+          ]
+        }
+      },
+      "0xC6": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "搭載空気清浄方法",
+          "en": "Mounted air cleaning method"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "electronic",
+              "descriptions": {
+                "ja": "電気集塵方式搭載情報",
+                "en": "Electronic dust collection"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon",
+              "descriptions": {
+                "ja": "クラスタイオン方式搭載情報",
+                "en": "Electronic dust collection"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC7": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "空気清浄機能モード設定",
+          "en": "Air purifier function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 8,
+          "bitmaps": [
+            {
+              "name": "electronic_level",
+              "descriptions": {
+                "ja": "電気集塵方式：制御レベル",
+                "en": "Electronic dust collection:Level"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000111"
+              },
+              "value": {
+                "type": "numericValue",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "numericValue": 0
+                  },
+                  {
+                    "edt": "0x01",
+                    "numericValue": 1
+                  },
+                  {
+                    "edt": "0x02",
+                    "numericValue": 2
+                  },
+                  {
+                    "edt": "0x03",
+                    "numericValue": 3
+                  },
+                  {
+                    "edt": "0x04",
+                    "numericValue": 4
+                  },
+                  {
+                    "edt": "0x05",
+                    "numericValue": 5
+                  },
+                  {
+                    "edt": "0x06",
+                    "numericValue": 6
+                  },
+                  {
+                    "edt": "0x07",
+                    "numericValue": 7
+                  }
+                ]
+              }
+            },
+            {
+              "name": "electronic_mode",
+              "descriptions": {
+                "ja": "電気集塵方式：動作モード",
+                "en": "Electronic dust collection:Mode"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "electronic_Auto",
+              "descriptions": {
+                "ja": "電気集塵方式：制御状態",
+                "en": "Electronic dust collection:Auto function"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "Manual",
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "Auto",
+                      "en": "Automatic"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon_level",
+              "descriptions": {
+                "ja": "クラスタイオン方式：制御レベル",
+                "en": "Cluster ion:Level"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00000111"
+              },
+              "value": {
+                "type": "numericValue",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "numericValue": 0
+                  },
+                  {
+                    "edt": "0x01",
+                    "numericValue": 1
+                  },
+                  {
+                    "edt": "0x02",
+                    "numericValue": 2
+                  },
+                  {
+                    "edt": "0x03",
+                    "numericValue": 3
+                  },
+                  {
+                    "edt": "0x04",
+                    "numericValue": 4
+                  },
+                  {
+                    "edt": "0x05",
+                    "numericValue": 5
+                  },
+                  {
+                    "edt": "0x06",
+                    "numericValue": 6
+                  },
+                  {
+                    "edt": "0x07",
+                    "numericValue": 7
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon_mode",
+              "descriptions": {
+                "ja": "クラスタイオン方式：動作モード",
+                "en": "Cluster ion:Mode"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon_Auto",
+              "descriptions": {
+                "ja": "クラスタイオン方式：制御状態",
+                "en": "Cluster ion:Auto function"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "Manual",
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "Auto",
+                      "en": "Automatic"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC8": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "搭載リフレッシュ方法",
+          "en": "Mounted air refresh method"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "minusIon",
+              "descriptions": {
+                "ja": "マイナスイオン方式搭載情報",
+                "en": "Minus ion collection"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon",
+              "descriptions": {
+                "ja": "クラスタイオン方式搭載情報",
+                "en": "Cluster ion"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xC9": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "リフレッシュ機能モード設定",
+          "en": "Air refresher function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 8,
+          "bitmaps": [
+            {
+              "name": "minusIon_level",
+              "descriptions": {
+                "ja": "マイナスイオン方式：制御レベル",
+                "en": "Electronic dust collection:Level"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000111"
+              },
+              "value": {
+                "type": "numericValue",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "numericValue": 0
+                  },
+                  {
+                    "edt": "0x01",
+                    "numericValue": 1
+                  },
+                  {
+                    "edt": "0x02",
+                    "numericValue": 2
+                  },
+                  {
+                    "edt": "0x03",
+                    "numericValue": 3
+                  },
+                  {
+                    "edt": "0x04",
+                    "numericValue": 4
+                  },
+                  {
+                    "edt": "0x05",
+                    "numericValue": 5
+                  },
+                  {
+                    "edt": "0x06",
+                    "numericValue": 6
+                  },
+                  {
+                    "edt": "0x07",
+                    "numericValue": 7
+                  }
+                ]
+              }
+            },
+            {
+              "name": "minusIon_mode",
+              "descriptions": {
+                "ja": "マイナスイオン方式：動作モード",
+                "en": "Electronic dust collection:Mode"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "minusIon_Auto",
+              "descriptions": {
+                "ja": "マイナスイオン方式：制御状態",
+                "en": "Electronic dust collection:Auto function"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "Manual",
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "Auto",
+                      "en": "Automatic"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon_level",
+              "descriptions": {
+                "ja": "クラスタイオン方式：制御レベル",
+                "en": "Cluster ion:Level"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00000111"
+              },
+              "value": {
+                "type": "numericValue",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "numericValue": 0
+                  },
+                  {
+                    "edt": "0x01",
+                    "numericValue": 1
+                  },
+                  {
+                    "edt": "0x02",
+                    "numericValue": 2
+                  },
+                  {
+                    "edt": "0x03",
+                    "numericValue": 3
+                  },
+                  {
+                    "edt": "0x04",
+                    "numericValue": 4
+                  },
+                  {
+                    "edt": "0x05",
+                    "numericValue": 5
+                  },
+                  {
+                    "edt": "0x06",
+                    "numericValue": 6
+                  },
+                  {
+                    "edt": "0x07",
+                    "numericValue": 7
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon_mode",
+              "descriptions": {
+                "ja": "クラスタイオン方式：動作モード",
+                "en": "Cluster ion:Mode"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "clusterIon_Auto",
+              "descriptions": {
+                "ja": "クラスタイオン方式：制御状態",
+                "en": "Cluster ion:Auto function"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "Manual",
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "Auto",
+                      "en": "Automatic"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xCA": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "搭載自己洗浄方法",
+          "en": "Mounted self-cleaning method"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "ozone",
+              "descriptions": {
+                "ja": "オゾン洗浄方式搭載情報",
+                "en": "Information about ozone cleaning method mounting"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "drying",
+              "descriptions": {
+                "ja": "乾燥方式搭載情報",
+                "en": "Information about drying method mounting"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "非搭載",
+                      "en": "No"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "搭載",
+                      "en": "Yes"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xCB": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "自己洗浄機能モード設定",
+          "en": "Self-cleaning function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 8,
+          "bitmaps": [
+            {
+              "name": "ozone_level",
+              "descriptions": {
+                "ja": "オゾン洗浄方式：制御レベル",
+                "en": "Ozone cleaning:Level"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000111"
+              },
+              "value": {
+                "type": "numericValue",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "numericValue": 0
+                  },
+                  {
+                    "edt": "0x01",
+                    "numericValue": 1
+                  },
+                  {
+                    "edt": "0x02",
+                    "numericValue": 2
+                  },
+                  {
+                    "edt": "0x03",
+                    "numericValue": 3
+                  },
+                  {
+                    "edt": "0x04",
+                    "numericValue": 4
+                  },
+                  {
+                    "edt": "0x05",
+                    "numericValue": 5
+                  },
+                  {
+                    "edt": "0x06",
+                    "numericValue": 6
+                  },
+                  {
+                    "edt": "0x07",
+                    "numericValue": 7
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ozone_mode",
+              "descriptions": {
+                "ja": "オゾン洗浄方式：動作モード",
+                "en": "Ozone cleaning:Mode"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ozone_Auto",
+              "descriptions": {
+                "ja": "オゾン洗浄方式：制御状態",
+                "en": "Ozone cleaning:Auto function"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "Manual",
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "Auto",
+                      "en": "Automatic"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "drying_level",
+              "descriptions": {
+                "ja": "乾燥方式：制御レベル",
+                "en": "Drying:Level"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00000111"
+              },
+              "value": {
+                "type": "numericValue",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": "0x00",
+                    "numericValue": 0
+                  },
+                  {
+                    "edt": "0x01",
+                    "numericValue": 1
+                  },
+                  {
+                    "edt": "0x02",
+                    "numericValue": 2
+                  },
+                  {
+                    "edt": "0x03",
+                    "numericValue": 3
+                  },
+                  {
+                    "edt": "0x04",
+                    "numericValue": 4
+                  },
+                  {
+                    "edt": "0x05",
+                    "numericValue": 5
+                  },
+                  {
+                    "edt": "0x06",
+                    "numericValue": 6
+                  },
+                  {
+                    "edt": "0x07",
+                    "numericValue": 7
+                  }
+                ]
+              }
+            },
+            {
+              "name": "drying_mode",
+              "descriptions": {
+                "ja": "乾燥方式：動作モード",
+                "en": "Drying:Mode"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00001000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "drying_Auto",
+              "descriptions": {
+                "ja": "乾燥方式：制御状態",
+                "en": "Drying:Auto function"
+              },
+              "position": {
+                "index": 1,
+                "bitMask": "0b00010000"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "Manual",
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "Auto",
+                      "en": "Automatic"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xCC": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "特別運転モード設定",
+          "en": "Special function setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x40",
+              "state": {
+                "ja": "設定なし",
+                "en": "No setting"
+              }
+            },
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "衣類乾燥",
+                "en": "Clothes dryer function"
+              }
+            },
+            {
+              "edt": "0x42",
+              "state": {
+                "ja": "結露抑制",
+                "en": "Condensation suppressor function"
+              }
+            },
+            {
+              "edt": "0x43",
+              "state": {
+                "ja": "ダニカビ抑制",
+                "en": "Mite and mold control function"
+              }
+            },
+            {
+              "edt": "0x44",
+              "state": {
+                "ja": "強制除霜",
+                "en": "Active defrosting function"
+              }
+            }
+          ]
+        }
+      },
+      "0xCD": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "内部動作状態",
+          "en": "Operation status of components"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "notApplicable",
+          "inf": "optional"
+        },
+        "data": {
+          "type": "bitmap",
+          "size": 1,
+          "bitmaps": [
+            {
+              "name": "compressor",
+              "descriptions": {
+                "ja": "コンプレッサ動作状態",
+                "en": "Operation status of the compressor"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000001"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "停止中",
+                      "en": "Not operating"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "動作中",
+                      "en": "In operation"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "thermostat",
+              "descriptions": {
+                "ja": "サーモON/OFF状態",
+                "en": "Operation status of the thermostat"
+              },
+              "position": {
+                "index": 0,
+                "bitMask": "0b00000010"
+              },
+              "value": {
+                "type": "state",
+                "size": 0,
+                "enum": [
+                  {
+                    "edt": 0,
+                    "state": {
+                      "ja": "OFF",
+                      "en": "OFF"
+                    }
+                  },
+                  {
+                    "edt": 1,
+                    "state": {
+                      "ja": "ON",
+                      "en": "ON"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "0xCE": {
+        "oneOf": [
+          {
+            "validRelease": {
+              "from": "A",
+              "to": "C"
+            },
+            "propertyName": {
+              "ja": "強制サーモモード設定",
+              "en": "Thermostat setting override function"
+            },
+            "accessRule": {
+              "get": "notApplicable",
+              "set": "optional",
+              "inf": "notApplicable"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x40",
+                  "state": {
+                    "ja": "通常設定",
+                    "en": "Normal setting"
+                  }
+                },
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "強制サーモON",
+                    "en": "Thermostat setting override function ON"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "強制サーモOFF",
+                    "en": "Thermostat setting override function OFF"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "validRelease": {
+              "from": "D",
+              "to": "latest"
+            },
+            "propertyName": {
+              "ja": "強制サーモモード設定",
+              "en": "Thermostat setting override function"
+            },
+            "accessRule": {
+              "get": "optional",
+              "set": "optional",
+              "inf": "optional"
+            },
+            "data": {
+              "type": "state",
+              "size": 1,
+              "enum": [
+                {
+                  "edt": "0x40",
+                  "state": {
+                    "ja": "通常設定",
+                    "en": "Normal setting"
+                  }
+                },
+                {
+                  "edt": "0x41",
+                  "state": {
+                    "ja": "強制サーモON",
+                    "en": "Thermostat setting override function ON"
+                  }
+                },
+                {
+                  "edt": "0x42",
+                  "state": {
+                    "ja": "強制サーモOFF",
+                    "en": "Thermostat setting override function OFF"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "0xCF": {
+        "validRelease": {
+          "from": "A",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "空気清浄モード設定",
+          "en": "Air purification mode setting"
+        },
+        "accessRule": {
+          "get": "optional",
+          "set": "optional",
+          "inf": "optional"
+        },
+        "data": {
+          "$ref": "#/definitions/state_ON-OFF-4142"
+        }
+      },
+      "0xD0": {
+        "validRelease": {
+          "from": "H",
+          "to": "latest"
+        },
+        "propertyName": {
+          "ja": "ブザー",
+          "en": "Buzzer"
+        },
+        "accessRule": {
+          "get": "notApplicable",
+          "set": "optional",
+          "inf": "notApplicable"
+        },
+        "data": {
+          "type": "state",
+          "size": 1,
+          "enum": [
+            {
+              "edt": "0x41",
+              "state": {
+                "ja": "ブザー音発生",
+                "en": "Buzzer sound generation"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Release note  ECHONET Lite Device Description
+
+2021.02.10  V3.2.1
+Release N 対応
